@@ -1,0 +1,37 @@
+diff -urN point-to-point.old/model/point-to-point-net-device.cc point-to-point/model/point-to-point-net-device.cc
+--- point-to-point.old/model/point-to-point-net-device.cc	2015-05-28 16:16:56.387426126 +0900
++++ point-to-point/model/point-to-point-net-device.cc	2015-05-28 11:51:17.219199527 +0900
+@@ -652,6 +652,8 @@
+     {
+     case 0x0021: return 0x0800;   //IPv4
+     case 0x0057: return 0x86DD;   //IPv6
++    case 0x0077: return 0x7777;   //ICN
++    case 0x0086: return 0x7786;   //3N
+     default: NS_ASSERT_MSG (false, "PPP Protocol number not defined!");
+     }
+   return 0;
+@@ -665,6 +667,8 @@
+     {
+     case 0x0800: return 0x0021;   //IPv4
+     case 0x86DD: return 0x0057;   //IPv6
++    case 0x7777: return 0x0077;   //ICN
++    case 0x7786: return 0x0086;   //3N
+     default: NS_ASSERT_MSG (false, "PPP Protocol number not defined!");
+     }
+   return 0;
+diff -urN point-to-point.old/model/ppp-header.cc point-to-point/model/ppp-header.cc
+--- point-to-point.old/model/ppp-header.cc	2015-05-28 16:16:56.387426126 +0900
++++ point-to-point/model/ppp-header.cc	2015-05-28 11:42:25.263191965 +0900
+@@ -67,6 +67,12 @@
+     case 0x0057: /* IPv6 */
+       proto = "IPv6 (0x0057)";
+       break;
++    case 0x0077: /* ICN */
++      proto = "ICN (0x0077)";
++      break;
++    case 0x0086: /* 3N */
++      proto = "3N (0x0086)";
++      break;
+     default:
+       NS_ASSERT_MSG (false, "PPP Protocol number not defined!");
+     }
