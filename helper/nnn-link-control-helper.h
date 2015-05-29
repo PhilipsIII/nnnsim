@@ -1,7 +1,8 @@
-/* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil -*- */
+/* -*- Mode:C++; c-file-style:"gnu" -*- */
 /*
  * Copyright (c) 2014 Waseda University, Sato Laboratory
-  *   This file is part of nnnsim.
+ *
+ *   This file is part of nnnsim.
  *
  *  nnn-link-control-helper.h is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
