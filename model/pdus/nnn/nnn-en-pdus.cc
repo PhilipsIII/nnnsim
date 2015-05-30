@@ -76,7 +76,7 @@ namespace ns3
       uint32_t num = GetNumPoa ();
 
       os << "  <POA Num>" << num << "</POA Num>"<< std::endl;
-      for (int i = 0; i < num; i++)
+      for (uint32_t i = 0; i < num; i++)
 	{
 	  os << "  <POA" << i << ">" << GetOnePoa(i) << "</POA" << i << ">"<< std::endl;
 	}

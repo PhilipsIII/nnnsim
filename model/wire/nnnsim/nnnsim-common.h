@@ -29,3 +29,4 @@
 #include "../wire-nnnsim-icn.h"
 #include "../../nnn-common.h"
 #include "../../nnn-pdus.h"
+#include "../../nnn-icn-pdus.h"

@@ -24,14 +24,13 @@
 
 NNN_NAMESPACE_BEGIN
 
-NS_OBJECT_ENSURE_REGISTERED (DU);
+NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.DU");
 
 namespace wire
 {
   namespace nnnSIM
   {
-
-    NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.DU");
+    NS_OBJECT_ENSURE_REGISTERED (DU);
 
     DU::DU ()
     : CommonHeader<nnn::DU> ()

@@ -34,24 +34,24 @@ namespace ns3
     {
       IncomingFace::IncomingFace (Ptr<Face> face)
       : m_face (face)
-      , m_arrivalTime (Simulator::Now ())
       , m_addrs (Create<NNNAddrAggregator> ())
+      , m_arrivalTime (Simulator::Now ())
       // , m_nonce (nonce)
       {
       }
 
       IncomingFace::IncomingFace (Ptr<Face> face, Ptr<const NNNAddress> addr)
       : m_face (face)
-      , m_arrivalTime (Simulator::Now ())
       , m_addrs (Create<NNNAddrAggregator> ())
+      , m_arrivalTime (Simulator::Now ())
       {
 	m_addrs->AddDestination(addr);
       }
 
       IncomingFace::IncomingFace ()
       : m_face (0)
-      , m_arrivalTime (0)
       , m_addrs (Create<NNNAddrAggregator> ())
+      , m_arrivalTime (0)
       {
       }
 

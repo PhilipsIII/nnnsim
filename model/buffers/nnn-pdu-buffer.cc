@@ -114,7 +114,7 @@ namespace ns3
     bool
     PDUBuffer::DestinationExists (Ptr<NNNAddress> addr)
     {
-      DestinationExists (*addr);
+      return DestinationExists (*addr);
     }
 
     void

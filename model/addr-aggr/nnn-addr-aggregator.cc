@@ -249,7 +249,7 @@ namespace ns3
 
       std::vector<Ptr<NNNAddress> > tmp = GetTotalDestinations ();
 
-      for (int i = 0; i < tmp.size(); i++)
+      for (size_t i = 0; i < tmp.size(); i++)
 	{
 	  os << "<Dest" << i << ">" << *tmp[i] << "</Dest" << i << ">" << std::endl;
 	}

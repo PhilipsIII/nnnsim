@@ -578,7 +578,7 @@ namespace ns3
 	  std::vector<Address> poaAddrs = en_p->GetPoas();
 
 	  NS_LOG_INFO ("Received PoA Names: ");
-	  for (int i = 0; i < poaAddrs.size (); i++)
+	  for (size_t i = 0; i < poaAddrs.size (); i++)
 	    {
 	      NS_LOG_INFO (i << ": " << poaAddrs[i]);
 	    }
@@ -764,18 +764,18 @@ namespace ns3
 		      NS_LOG_INFO ("Error - found differences in PoAs for (" << tmp << "), rejecting!");
 
 		      NS_LOG_INFO ("Received PoAs -");
-		      for (int i = 0; i < storedPoas.size (); i++ )
+		      for (size_t i = 0; i < storedPoas.size (); i++ )
 			{
 			  NS_LOG_INFO (i << ": " << storedPoas[i]);
 			}
 		      NS_LOG_INFO ("Store PoAs -");
-		      for (int i = 0; i < receivedPoas.size (); i++ )
+		      for (size_t i = 0; i < receivedPoas.size (); i++ )
 			{
 			  NS_LOG_INFO (i << ": " << receivedPoas[i]);
 			}
 
 		      NS_LOG_INFO ("Difference in PoAs -");
-		      for (int i = 0; i < diff.size (); i ++)
+		      for (size_t i = 0; i < diff.size (); i ++)
 			{
 			  NS_LOG_INFO (i << ": " << diff[i]);
 			}
@@ -954,18 +954,18 @@ namespace ns3
 
 
 	  NS_LOG_INFO ("Node PoAs -");
-	  for (int i = 0; i < myPoas.size (); i++ )
+	  for (size_t i = 0; i < myPoas.size (); i++ )
 	    {
 	      NS_LOG_INFO (i << ": " << myPoas[i]);
 	    }
 	  NS_LOG_INFO ("Received PoAs -");
-	  for (int i = 0; i < oenPoas.size (); i++ )
+	  for (size_t i = 0; i < oenPoas.size (); i++ )
 	    {
 	      NS_LOG_INFO (i << ": " << oenPoas[i]);
 	    }
 
 	  NS_LOG_INFO ("Difference in PoAs -");
-	  for (int i = 0; i < diff.size (); i ++)
+	  for (size_t i = 0; i < diff.size (); i ++)
 	    {
 	      NS_LOG_INFO (i << ": " << diff[i]);
 	    }
@@ -1478,7 +1478,7 @@ namespace ns3
 	    }
 	}
 
-      for (int i = 0; i < poanames2.size (); i++)
+      for (size_t i = 0; i < poanames2.size (); i++)
 	{
 	  poanames1.push_back (poanames2[i]);
 	}
@@ -1499,7 +1499,7 @@ namespace ns3
 
 	  Ptr<Face> tmp;
 	  // Now transmit the EN through all Faces that are not of type APPLICATION
-	  for (int i = 0; i < m_faces->GetN (); i++)
+	  for (uint32_t i = 0; i < m_faces->GetN (); i++)
 	    {
 	      // Get a Face
 	      tmp = m_faces->Get (i);
@@ -1517,7 +1517,7 @@ namespace ns3
 		  en_o->SetLifetime (m_3n_lifetime);
 
 		  // Add all the PoA names we found
-		  for (int i = 0; i < poanames.size (); i++)
+		  for (size_t i = 0; i < poanames.size (); i++)
 		    {
 		      NS_LOG_INFO ("Adding PoA name: " << poanames[i]);
 		      en_o->AddPoa (poanames[i]);
@@ -1553,7 +1553,7 @@ namespace ns3
 	  bool ok = false;
 	  Ptr<Face> tmp;
 	  // Now transmit the REN through all Faces that are not of type APPLICATION
-	  for (int i = 0; i < m_faces->GetN (); i++)
+	  for (uint32_t i = 0; i < m_faces->GetN (); i++)
 	    {
 	      // Get a Face
 	      tmp = m_faces->Get (i);
@@ -1582,7 +1582,7 @@ namespace ns3
 		  // Write the expire time for the 3N name (Time within the simulator is absolute)
 		  ren_o->SetRemainLease (m_node_names->findNameExpireTime (addr));
 		  // Add all the PoA names we found
-		  for (int i = 0; i < poanames.size (); i++)
+		  for (size_t i = 0; i < poanames.size (); i++)
 		    {
 		      ren_o->AddPoa (poanames[i]);
 		    }
@@ -1626,7 +1626,7 @@ namespace ns3
 
 	  Ptr<Face> tmp;
 	  // Now transmit the DEN through all Faces that are not of type APPLICATION
-	  for (int i = 0; i < m_faces->GetN (); i++)
+	  for (uint32_t i = 0; i < m_faces->GetN (); i++)
 	    {
 	      // Get a Face
 	      tmp = m_faces->Get (i);
@@ -1644,7 +1644,7 @@ namespace ns3
 		  // Set the 3N name for the REN
 		  den_o->SetName (*addr);
 		  // Add all the PoA names we found
-		  for (int i = 0; i < poanames.size (); i++)
+		  for (size_t i = 0; i < poanames.size (); i++)
 		    {
 		      den_o->AddPoa (poanames[i]);
 		    }
@@ -2790,7 +2790,7 @@ namespace ns3
 	      NS_LOG_INFO ("We have reached desired destination, looking for Apps");
 	      Ptr<Face> tmpFace;
 	      // We have reached the destination, look for Apps
-	      for (int i = 0; i < m_faces->GetN (); i++)
+	      for (uint32_t i = 0; i < m_faces->GetN (); i++)
 		{
 		  tmpFace = m_faces->Get (i);
 		  // Check that the Face is of type APPLICATION
@@ -3007,7 +3007,7 @@ namespace ns3
 	      NS_LOG_INFO ("We have reached desired destination, looking for Apps");
 	      Ptr<Face> tmpFace;
 	      // We have reached the destination, look for Apps
-	      for (int i = 0; i < m_faces->GetN (); i++)
+	      for (uint32_t i = 0; i < m_faces->GetN (); i++)
 		{
 		  tmpFace = m_faces->Get (i);
 		  // Check that the Face is of type APPLICATION

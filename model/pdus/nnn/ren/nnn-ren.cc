@@ -41,8 +41,8 @@ namespace ns3
     REN::REN (Ptr<NNNAddress> name)
     : NNNPDU (REN_NNN, Seconds (0))
     , ENPDU ()
-    , m_name     (name)
     , m_re_lease (Seconds (0))
+    , m_name     (name)
     {
     }
 

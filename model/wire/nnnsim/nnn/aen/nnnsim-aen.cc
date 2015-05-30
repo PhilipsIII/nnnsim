@@ -157,7 +157,7 @@ namespace wire
 
 	  // Since the bit representation is in 8 bit chunks, serialize it
 	  // accordingly
-	  for (int j = 0; j < serialSize; j++)
+	  for (uint32_t j = 0; j < serialSize; j++)
 	    start.WriteU8(buffer[j]);
 	}
 
@@ -200,7 +200,7 @@ namespace wire
 
       NS_LOG_INFO ("Deserialize -> PoA Num = " << totalpoas);
 
-      for (int k = 0; k < totalpoas; k++)
+      for (uint16_t k = 0; k < totalpoas; k++)
 	{
 	  uint8_t type = i.ReadU8 ();
 	  uint8_t length = i.ReadU8 ();
@@ -208,7 +208,7 @@ namespace wire
 	  // Create a buffer to be able to deserialize PoAs
 	  uint8_t buffer[length];
 
-	  for (int j = 0; j < length; j++)
+	  for (uint8_t j = 0; j < length; j++)
 	    {
 	      buffer[j] = i.ReadU8 ();
 	    }

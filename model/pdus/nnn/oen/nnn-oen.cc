@@ -147,7 +147,7 @@ namespace ns3
 
       os << "  <Giving Name>" << GetSrcName () << "</Giving Name>" << std::endl;
       os << "  <Personal POA Num>" << num << "</Personal POA Num>"<< std::endl;
-      for (int i = 0; i < num; i++)
+      for (uint32_t i = 0; i < num; i++)
 	{
 	  os << "  <Personal POA" << i << ">" << GetPersonalOnePoa (i) << "</Personal POA" << i << ">"<< std::endl;
 	}

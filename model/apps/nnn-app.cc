@@ -95,12 +95,12 @@ namespace ns3
     }
 
     App::App ()
-    : m_face                (0)
-    , m_active              (false)
+    : m_active              (false)
+    , m_face                (0)
     , m_has3Nname           (false)
     , m_current3Nname       (Create<NNNAddress> ())
-    , m_possibleDestination (Create<NNNAddress> ())
     , m_isMobile            (false)
+    , m_possibleDestination (Create<NNNAddress> ())
     {
     }
 

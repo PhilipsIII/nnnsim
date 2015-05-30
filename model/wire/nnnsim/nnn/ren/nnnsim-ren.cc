@@ -24,13 +24,13 @@
 
 NNN_NAMESPACE_BEGIN
 
-NS_OBJECT_ENSURE_REGISTERED (REN);
+NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.REN");
 
 namespace wire
 {
   namespace nnnSIM
   {
-    NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.REN");
+    NS_OBJECT_ENSURE_REGISTERED (REN);
 
     REN::REN ()
     : CommonHeader<nnn::REN>()

@@ -24,13 +24,13 @@
 
 NNN_NAMESPACE_BEGIN
 
-NS_OBJECT_ENSURE_REGISTERED (INF);
+NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.INF");
 
 namespace wire
 {
   namespace nnnSIM
   {
-    NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.INF");
+    NS_OBJECT_ENSURE_REGISTERED (INF);
 
     INF::INF ()
     : CommonHeader<nnn::INF> ()
