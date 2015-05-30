@@ -77,14 +77,11 @@ Wire::ToInterest (Ptr<Packet> packet, int8_t wireFormat/* = WIRE_FORMAT_AUTODETE
           HeaderHelper::Type type = HeaderHelper::GetICNHeaderType (packet);
           switch (type)
             {
-            case HeaderHelper::INTEREST_NDNSIM:
+            case HeaderHelper::INTEREST_ICN:
               {
                 return wire::icnSIM::Interest::FromWire (packet);
               }
-            case HeaderHelper::CONTENT_OBJECT_NDNSIM:
-            case HeaderHelper::CONTENT_OBJECT_CCNB:
-              NS_FATAL_ERROR ("Data packet supplied for InterestFromWire function");
-              break;
+            case HeaderHelper::CONTENT_OBJECT_ICN:
             default:
               NS_FATAL_ERROR ("Unsupported format");
               return 0;
@@ -135,14 +132,11 @@ Wire::ToData (Ptr<Packet> packet, int8_t wireFormat/* = WIRE_FORMAT_AUTODETECT*/
           HeaderHelper::Type type = HeaderHelper::GetICNHeaderType (packet);
           switch (type)
             {
-            case HeaderHelper::CONTENT_OBJECT_NDNSIM:
+            case HeaderHelper::CONTENT_OBJECT_ICN:
               {
                 return wire::icnSIM::Data::FromWire (packet);
               }
-            case HeaderHelper::INTEREST_NDNSIM:
-            case HeaderHelper::INTEREST_CCNB:
-              NS_FATAL_ERROR ("Interest supplied for DataFromWire function");
-              break;
+            case HeaderHelper::INTEREST_ICN:
             default:
               NS_FATAL_ERROR ("Unsupported format");
               return 0;

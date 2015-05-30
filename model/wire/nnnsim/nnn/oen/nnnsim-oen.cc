@@ -24,7 +24,7 @@
 
 namespace ns3
 {
-  NS_OBJECT_ENSURE_REGISTERED (OEN);
+  NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.OEN");
 
   namespace nnn
   {
@@ -32,7 +32,7 @@ namespace ns3
     {
       namespace nnnSIM
       {
-	NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.OEN");
+	NS_OBJECT_ENSURE_REGISTERED (OEN);
 
 	OEN::OEN ()
 	: CommonHeader<nnn::OEN> ()
@@ -103,14 +103,14 @@ namespace ns3
 
 	  poa_num = m_ptr->GetNumPoa ();
 	  // Get the serialized size from the Address class
-	  for (int i = 0; i < poa_num; i++)
+	  for (uint32_t i = 0; i < poa_num; i++)
 	    {
 	      poatype_size += m_ptr->GetOnePoa (i).GetSerializedSize ();
 	    }
 
 	  poa_num2 = m_ptr->GetPersonalNumPoa ();
 	  // Get the serialized size from the Address class
-	  for (int i = 0; i < poa_num2; i++)
+	  for (uint32_t i = 0; i < poa_num2; i++)
 	    {
 	      poatype_size += m_ptr->GetPersonalOnePoa (i).GetSerializedSize ();
 	    }
@@ -153,7 +153,7 @@ namespace ns3
 	  start.WriteU16(totalpoas);
 
 	  // Serialize PoAs
-	  for (int i = 0; i < totalpoas; i++)
+	  for (uint32_t i = 0; i < totalpoas; i++)
 	    {
 	      Address tmpaddr = m_ptr->GetOnePoa (i);
 	      uint32_t serialSize = tmpaddr.GetSerializedSize ();
@@ -165,7 +165,7 @@ namespace ns3
 
 	      // Since the bit representation is in 8 bit chunks, serialize it
 	      // accordingly
-	      for (int j = 0; j < serialSize; j++)
+	      for (uint32_t j = 0; j < serialSize; j++)
 		start.WriteU8 (buffer[j]);
 	    }
 
@@ -190,7 +190,7 @@ namespace ns3
 	  start.WriteU16(totalpersonalpoas);
 
 	  // Serialize personal PoAs
-	  for (int i = 0; i < totalpersonalpoas; i++)
+	  for (uint32_t i = 0; i < totalpersonalpoas; i++)
 	    {
 	      Address tmpaddr = m_ptr->GetPersonalOnePoa (i);
 	      uint32_t serialSize = tmpaddr.GetSerializedSize ();
@@ -207,7 +207,7 @@ namespace ns3
 
 	      // Since the bit representation is in 8 bit chunks, serialize it
 	      // accordingly
-	      for (int j = 0; j < serialSize; j++)
+	      for (uint32_t j = 0; j < serialSize; j++)
 		start.WriteU8(buffer[j]);
 	    }
 
@@ -241,7 +241,7 @@ namespace ns3
 
 	  NS_LOG_INFO ("Deserialize -> PoA Num = " << totalpoas);
 
-	  for (int k = 0; k < totalpoas; k++)
+	  for (uint16_t k = 0; k < totalpoas; k++)
 	    {
 	      uint8_t type = i.ReadU8 ();
 	      uint8_t length = i.ReadU8 ();
@@ -249,7 +249,7 @@ namespace ns3
 	      // Create a buffer to be able to deserialize PoAs
 	      uint8_t buffer[length];
 
-	      for (int j = 0; j < length; j++)
+	      for (uint8_t j = 0; j < length; j++)
 		{
 		  buffer[j] = i.ReadU8 ();
 		}
@@ -273,7 +273,7 @@ namespace ns3
 
 	  NS_LOG_INFO ("Deserialize -> Personal PoA Num = " << personal_totalpoas);
 
-	  for (int k = 0; k < personal_totalpoas; k++)
+	  for (uint16_t k = 0; k < personal_totalpoas; k++)
 	    {
 	      uint8_t type = i.ReadU8 ();
 	      uint8_t length = i.ReadU8 ();
@@ -281,7 +281,7 @@ namespace ns3
 	      // Create a buffer to be able to deserialize PoAs
 	      uint8_t buffer[length];
 
-	      for (int j = 0; j < length; j++)
+	      for (uint8_t j = 0; j < length; j++)
 		{
 		  buffer[j] = i.ReadU8 ();
 		}

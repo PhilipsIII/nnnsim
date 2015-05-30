@@ -95,11 +95,11 @@ namespace wire
     AEN::GetSerializedSize (void) const
     {
       size_t poatype_size = 0;
-      size_t poa_num = 0;
+      uint32_t poa_num = 0;
 
       poa_num = m_ptr->GetNumPoa ();
       // Get the serialized size from the Address class
-      for (int i = 0; i < poa_num; i++)
+      for (uint32_t i = 0; i < poa_num; i++)
 	{
 	  poatype_size += m_ptr->GetOnePoa (i).GetSerializedSize ();
 	}
@@ -140,7 +140,7 @@ namespace wire
       start.WriteU16(totalpoas);
 
       // Serialize PoAs
-      for (int i = 0; i < totalpoas; i++)
+      for (uint32_t i = 0; i < totalpoas; i++)
 	{
 	  Address tmpaddr = m_ptr->GetOnePoa(i);
 	  uint32_t serialSize = tmpaddr.GetSerializedSize ();

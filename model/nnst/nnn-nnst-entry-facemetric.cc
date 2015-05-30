@@ -34,10 +34,10 @@ namespace ns3
       : m_face         (face)
       , m_dst_addr     (addr)
       , m_lease_expire (lease_expire)
-      , m_status       (NNN_NNST_GREEN)
-      , m_routingCost  (cost)
       , m_sRtt         (Seconds (0))
       , m_rttVar       (Seconds (0))
+      , m_routingCost  (cost)
+      , m_status       (NNN_NNST_GREEN)
       {
       }
 

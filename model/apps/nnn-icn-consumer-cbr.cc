@@ -69,9 +69,10 @@ namespace ns3
     ConsumerCbr::ConsumerCbr ()
     : m_frequency (1.0)
     , m_firstTime (true)
+    , useUni      (false)
     , uniRandom   (CreateObject<UniformRandomVariable> ())
     , expRandom   (CreateObject<ExponentialRandomVariable> ())
-    , useUni      (false)
+    , m_randomType ("")
     {
       NS_LOG_FUNCTION_NOARGS ();
       m_seqMax = std::numeric_limits<uint32_t>::max ();

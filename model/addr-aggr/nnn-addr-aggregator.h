@@ -51,8 +51,8 @@ namespace ns3
       NNNAddrEntry ()
       : m_sector (Create<NNNAddress> ())
       , m_addresses (std::set<Ptr<NNNAddress>, PtrNNNComp> ())
-      , item_ (0)
       , m_totaladdr (0)
+      , item_ (0)
       {
       }
 

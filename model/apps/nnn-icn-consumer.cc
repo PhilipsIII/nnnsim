@@ -327,10 +327,10 @@ namespace ns3
 	  Ptr<Interest> interest = 0;
 	  switch (type)
 	  {
-	    case icn::HeaderHelper::CONTENT_OBJECT_NDNSIM:
+	    case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 	      data = icn::Wire::ToData (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
 	      break;
-	    case icn::HeaderHelper::INTEREST_NDNSIM:
+	    case icn::HeaderHelper::INTEREST_ICN:
 	      interest = icn::Wire::ToInterest (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
 	      break;
 	  }

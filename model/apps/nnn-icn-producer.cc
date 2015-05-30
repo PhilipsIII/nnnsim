@@ -208,8 +208,10 @@ namespace ns3
 	      Ptr<Interest> interest = 0;
 	      switch (type)
 	      {
-		case icn::HeaderHelper::INTEREST_NDNSIM:
+		case icn::HeaderHelper::INTEREST_ICN:
 		  interest = icn::Wire::ToInterest (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
+		  break;
+		case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 		  break;
 	      }
 
@@ -276,8 +278,10 @@ namespace ns3
 	      Ptr<Interest> interest = 0;
 	      switch (type)
 	      {
-		case icn::HeaderHelper::INTEREST_NDNSIM:
+		case icn::HeaderHelper::INTEREST_ICN:
 		  interest = icn::Wire::ToInterest (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
+		  break;
+		case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 		  break;
 	      }
 
@@ -342,8 +346,10 @@ namespace ns3
 	      Ptr<Interest> interest = 0;
 	      switch (type)
 	      {
-		case icn::HeaderHelper::INTEREST_NDNSIM:
+		case icn::HeaderHelper::INTEREST_ICN:
 		  interest = icn::Wire::ToInterest (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
+		  break;
+		case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 		  break;
 	      }
 	      if (interest != 0)
@@ -403,8 +409,10 @@ namespace ns3
 	      Ptr<Interest> interest = 0;
 	      switch (type)
 	      {
-		case icn::HeaderHelper::INTEREST_NDNSIM:
+		case icn::HeaderHelper::INTEREST_ICN:
 		  interest = icn::Wire::ToInterest (packet, icn::Wire::WIRE_FORMAT_NDNSIM);
+		  break;
+		case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 		  break;
 	      }
 

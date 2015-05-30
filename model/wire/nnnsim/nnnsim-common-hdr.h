@@ -122,21 +122,17 @@ namespace ns3
 	    m_ptr->Print(os);
 	  }
 
-	  virtual uint32_t GetSerializedSize (void) const
-	  {
-	  }
+	  virtual uint32_t GetSerializedSize (void) const = 0;
 
 	  virtual void Serialize (Buffer::Iterator start) const
 	  {
 	  }
 
-	  virtual uint32_t Deserialize (Buffer::Iterator start)
-	  {
-	  }
+	  virtual uint32_t Deserialize (Buffer::Iterator start) = 0;
 
 	  protected:
-	  uint16_t m_packet_len;
 	  Ptr<T> m_ptr;
+	  uint16_t m_packet_len;
 	};
 
       } /* namespace nnnSIM */

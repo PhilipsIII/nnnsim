@@ -351,8 +351,8 @@ namespace ns3
     , m_leased_names         (Create<NamesContainer> ())
     , m_node_pdu_buffer      (Create<PDUBuffer> ())
     , m_producedNameNumber   (0)
-    , m_sent_ren             (false)
     , m_on_ren_oen           (false)
+    , m_sent_ren             (false)
     {
       m_node_names->RegisterCallbacks(
 	  MakeCallback (&ForwardingStrategy::Reenroll, this),
@@ -1213,11 +1213,11 @@ namespace ns3
 	  icn::HeaderHelper::Type icnType = icn::HeaderHelper::GetICNHeaderType(icn_pdu);
 	  switch (icnType)
 	  {
-	    case icn::HeaderHelper::INTEREST_NDNSIM:
+	    case icn::HeaderHelper::INTEREST_ICN:
 	      interest = ns3::icn::Wire::ToInterest (icn_pdu, ns3::icn::Wire::WIRE_FORMAT_NDNSIM);
 	      receivedInterest = true;
 	      break;
-	    case icn::HeaderHelper::CONTENT_OBJECT_NDNSIM:
+	    case icn::HeaderHelper::CONTENT_OBJECT_ICN:
 	      data = ns3::icn::Wire::ToData (icn_pdu, ns3::icn::Wire::WIRE_FORMAT_NDNSIM);
 	      receivedData = true;
 	      break;

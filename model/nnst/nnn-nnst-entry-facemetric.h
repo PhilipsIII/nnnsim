@@ -42,12 +42,14 @@ namespace ns3
     {
       class FaceMetric {
       public:
+
 	enum Status { NNN_NNST_GREEN = 1,
 	  NNN_NNST_YELLOW = 2,
 	  NNN_NNST_RED = 3
 	};
 
 	FaceMetric(Ptr<Face> face, Address addr, Time lease_expire, int32_t cost);
+
 	virtual ~FaceMetric();
 
 	/**

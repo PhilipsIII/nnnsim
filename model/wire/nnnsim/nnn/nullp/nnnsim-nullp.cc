@@ -24,13 +24,13 @@
 
 NNN_NAMESPACE_BEGIN
 
-NS_OBJECT_ENSURE_REGISTERED (NULLp);
+NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.NULLp");
 
 namespace wire
 {
   namespace nnnSIM
   {
-    NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.NULLp");
+    NS_OBJECT_ENSURE_REGISTERED (NULLp);
 
     NULLp::NULLp ()
     : CommonHeader<nnn::NULLp> ()

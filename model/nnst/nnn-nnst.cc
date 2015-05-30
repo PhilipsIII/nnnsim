@@ -304,7 +304,7 @@ namespace ns3
       // If the relative expire time is above 0, we can save it
       if (relativeExpireTime.IsStrictlyPositive())
 	{
-	  char c;
+	  char c = 'a';
 	  Ptr<nnst::Entry> tmp = Add (Create<NNNAddress> (name), face, poa, lease_expire, metric, c);
 
 	  Simulator::Schedule(relativeExpireTime, &NNST::cleanExpired, this, tmp);
@@ -327,7 +327,7 @@ namespace ns3
       if (relativeExpireTime.IsStrictlyPositive())
 	{
 	  Ptr<nnst::Entry> tmp;
-	  char c;
+	  char c = 'a';
 	  for (std::vector<Ptr<Face> >::iterator i = faces.begin(); i != faces.end (); ++i)
 	    {
 	      tmp = Add(prefix, *i, poa, lease_expire, metric, c);
@@ -353,7 +353,7 @@ namespace ns3
       if (relativeExpireTime.IsStrictlyPositive())
 	{
 	  Ptr<nnst::Entry> tmp;
-	  char c;
+	  char c = 'a';
 	  for (std::vector<Address>::iterator i = poas.begin(); i != poas.end (); ++i)
 	    {
 	      tmp = Add(prefix, face, *i, lease_expire, metric, c);
@@ -378,7 +378,7 @@ namespace ns3
       // If the relative expire time is above 0, we can save it
       if (relativeExpireTime.IsStrictlyPositive())
 	{
-	  char c;
+	  char c = 'a';
 	  Ptr<nnst::Entry> tmp = Add(name, face, poa, lease_expire, metric, c);
 
 	  Simulator::Schedule(relativeExpireTime, &NNST::cleanExpired, this, tmp);

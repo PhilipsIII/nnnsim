@@ -52,8 +52,7 @@ namespace ns3
       /**
      @brief enum for ICN PDU types
        */
-      enum Type {INTEREST_CCNB, CONTENT_OBJECT_CCNB,
-	INTEREST_NDNSIM, CONTENT_OBJECT_NDNSIM};
+      enum Type {INTEREST_ICN, CONTENT_OBJECT_ICN};
 
       /**
        *	Packet ::= Version

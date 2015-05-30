@@ -20,7 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "../apps/nnn-icn-app.h"
+#include "apps/nnn-icn-app.h"
 
 #include "ns3/log.h"
 

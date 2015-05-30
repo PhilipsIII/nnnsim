@@ -31,11 +31,8 @@
 #include <iomanip>
 #include "icn-header-helper.h"
 
-const uint8_t INTEREST_CCNB_BYTES[]       = {0x01, 0xD2};
-const uint8_t CONTENT_OBJECT_CCNB_BYTES[] = {0x04, 0x82};
-
-const uint8_t INTEREST_NDNSIM_BYTES[]       = {0x80, 0x00};
-const uint8_t CONTENT_OBJECT_NDNSIM_BYTES[] = {0x80, 0x01};
+const uint8_t INTEREST_ICN_BYTES[]       = {0x80, 0x00};
+const uint8_t CONTENT_OBJECT_ICN_BYTES[] = {0x80, 0x01};
 
 namespace ns3
 {
@@ -52,21 +49,13 @@ namespace ns3
       if (read!=2) throw UnknownHeaderException();
 
       NS_LOG_DEBUG (*packet);
-      if (type[0] == INTEREST_CCNB_BYTES[0] && type[1] == INTEREST_CCNB_BYTES[1])
+      if (type[0] == INTEREST_ICN_BYTES[0] && type[1] == INTEREST_ICN_BYTES[1])
 	{
-	  return HeaderHelper::INTEREST_CCNB;
+	  return HeaderHelper::INTEREST_ICN;
 	}
-      else if (type[0] == CONTENT_OBJECT_CCNB_BYTES[0] && type[1] == CONTENT_OBJECT_CCNB_BYTES[1])
+      else if (type[0] == CONTENT_OBJECT_ICN_BYTES[0] && type[1] == CONTENT_OBJECT_ICN_BYTES[1])
 	{
-	  return HeaderHelper::CONTENT_OBJECT_CCNB;
-	}
-      else if (type[0] == INTEREST_NDNSIM_BYTES[0] && type[1] == INTEREST_NDNSIM_BYTES[1])
-	{
-	  return HeaderHelper::INTEREST_NDNSIM;
-	}
-      else if (type[0] == CONTENT_OBJECT_NDNSIM_BYTES[0] && type[1] == CONTENT_OBJECT_NDNSIM_BYTES[1])
-	{
-	  return HeaderHelper::CONTENT_OBJECT_NDNSIM;
+	  return HeaderHelper::CONTENT_OBJECT_ICN;
 	}
 
       NS_LOG_DEBUG (*packet);
