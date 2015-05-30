@@ -5,4 +5,4 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
-find . -name $1 | sed "s/^.\///" | sed "s/^/\'/" | sed "s/$/\'/"
+find . -name $1 | sed "s/^.\///" | sed "s/^/\'/" | sed "s/$/\',/"
