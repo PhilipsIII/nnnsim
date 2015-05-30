@@ -38,7 +38,7 @@
 
 #include <fstream>
 
-#include "../../apps/nnn-app.h"
+#include "../../model/apps/nnn-app.h"
 
 NS_LOG_COMPONENT_DEFINE ("nnn.AppDelayTracer");
 

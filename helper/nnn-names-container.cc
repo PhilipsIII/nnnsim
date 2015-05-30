@@ -31,9 +31,9 @@ namespace ns3
   namespace nnn
   {
     NamesContainer::NamesContainer ()
-    : renewName (MakeNullCallback <void> ())
+    : defaultRenewal (Seconds(30))
+    , renewName (MakeNullCallback <void> ())
     , hasNoName (MakeNullCallback <void> ())
-    , defaultRenewal (Seconds(30))
     {
     }
 
@@ -168,7 +168,6 @@ namespace ns3
       names_set_by_name::iterator it = names_index.find(name);
 
       Time absoluteLeaseTime = Simulator::Now () + lease_expire;
-      bool change = false;
 
       if (it != names_index.end())
 	{

@@ -39,8 +39,6 @@ namespace ns3
 
   namespace nnn
   {
-    NS_OBJECT_ENSURE_REGISTERED (AppHelper);
-
     AppHelper::AppHelper (const std::string &app)
     {
       m_factory.SetTypeId (app);
