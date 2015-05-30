@@ -2007,7 +2007,7 @@ namespace ns3
 			// Configure payload for PDU
 			null_p_spec->SetPayload (icn_pdu);
 			// Signal that the PDU had an ICN PDU as payload
-			null_p_spec->SetPDUPayloadType (NDN_NNN);
+			null_p_spec->SetPDUPayloadType (ICN_NNN);
 
 			ok = incoming.m_face->SendNULLp (null_p_spec);
 		      }
@@ -2039,7 +2039,7 @@ namespace ns3
 			// Set the lifetime of the 3N PDU
 			do_o_spec->SetLifetime (m_3n_lifetime);
 			// Signal that the PDU had an ICN PDU as payload
-			do_o_spec->SetPDUPayloadType (NDN_NNN);
+			do_o_spec->SetPDUPayloadType (ICN_NNN);
 			// Configure payload for PDU
 			do_o_spec->SetPayload (icn_pdu);
 
@@ -2293,7 +2293,7 @@ namespace ns3
 		    // Configure payload for PDU
 		    do_o_spec->SetPayload (icn_pdu);
 		    // Signal that the PDU had an ICN PDU as payload
-		    do_o_spec->SetPDUPayloadType (NDN_NNN);
+		    do_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		    // Send the DO PDU out the selected Face
 		    ok = outFace->SendDO (do_o_spec, destAddr);
@@ -2337,7 +2337,7 @@ namespace ns3
 		    // Configure payload for PDU
 		    du_o_spec->SetPayload (icn_pdu);
 		    // Signal that the PDU had an ICN PDU as payload
-		    du_o_spec->SetPDUPayloadType (NDN_NNN);
+		    du_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		    // Send the DU PDU out the selected Face
 		    ok = outFace->SendDU (du_o_spec, destAddr);
@@ -2378,7 +2378,7 @@ namespace ns3
 		    // Configure payload for PDU
 		    null_p_o->SetPayload (icn_pdu);
 		    // Signal that the PDU had an ICN PDU as payload
-		    null_p_o->SetPDUPayloadType (NDN_NNN);
+		    null_p_o->SetPDUPayloadType (ICN_NNN);
 
 		    // Send out the NULL PDU
 		    ok = incoming.m_face->SendNULLp (null_p_o);
@@ -2845,7 +2845,7 @@ namespace ns3
 		  // Configure payload for PDU
 		  do_o_spec->SetPayload (icn_pdu);
 		  // Signal that the PDU had an ICN PDU as payload
-		  do_o_spec->SetPDUPayloadType (NDN_NNN);
+		  do_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		  pdu_i = DynamicCast<NNNPDU> (do_o_spec);
 		}
@@ -2862,7 +2862,7 @@ namespace ns3
 		  // Configure payload for PDU
 		  du_o_spec->SetPayload (icn_pdu);
 		  // Signal that the PDU had an ICN PDU as payload
-		  du_o_spec->SetPDUPayloadType (NDN_NNN);
+		  du_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		  pdu_i = DynamicCast<NNNPDU> (du_o_spec);
 		}
@@ -3090,7 +3090,7 @@ namespace ns3
 		  // Configure payload for PDU
 		  do_o_spec->SetPayload (icn_pdu);
 		  // Signal that the PDU had an ICN PDU as payload
-		  do_o_spec->SetPDUPayloadType (NDN_NNN);
+		  do_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		  tosend_do = do_o_spec;
 		}
@@ -3107,7 +3107,7 @@ namespace ns3
 		  // Configure payload for PDU
 		  du_o_spec->SetPayload (icn_pdu);
 		  // Signal that the PDU had an ICN PDU as payload
-		  du_o_spec->SetPDUPayloadType (NDN_NNN);
+		  du_o_spec->SetPDUPayloadType (ICN_NNN);
 
 		  tosend_du = du_o_spec;
 		}

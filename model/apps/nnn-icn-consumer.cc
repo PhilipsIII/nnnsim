@@ -230,7 +230,7 @@ namespace ns3
 		  // It is flagged. Use the 3N name
 		  NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using SO PDU src: (" << *m_current3Nname << ")");
 		  Ptr<SO> so_o = Create<SO> ();
-		  so_o->SetPDUPayloadType(NDN_NNN);
+		  so_o->SetPDUPayloadType(ICN_NNN);
 		  so_o->SetLifetime(m_3n_lifetime);
 		  so_o->SetName(*m_current3Nname);
 		  so_o->SetPayload(retPkt);
@@ -242,7 +242,7 @@ namespace ns3
 		  // No flag, use NULLp PDUs
 		  NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using NULLp PDU");
 		  Ptr<NULLp> nullp_o = Create<NULLp> ();
-		  nullp_o->SetPDUPayloadType (NDN_NNN);
+		  nullp_o->SetPDUPayloadType (ICN_NNN);
 		  nullp_o->SetLifetime(m_3n_lifetime);
 		  nullp_o->SetPayload (retPkt);
 		  m_face->ReceiveNULLp(nullp_o);
@@ -257,7 +257,7 @@ namespace ns3
 		{
 		  NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using DU PDU src: (" << *m_current3Nname << ") dst: (" << *m_possibleDestination << ")");
 		  Ptr<DU> du_o = Create<DU> ();
-		  du_o->SetPDUPayloadType (NDN_NNN);
+		  du_o->SetPDUPayloadType (ICN_NNN);
 		  du_o ->SetLifetime(m_3n_lifetime);
 		  du_o->SetSrcName (*m_current3Nname);
 		  du_o->SetDstName (*m_possibleDestination);
@@ -270,7 +270,7 @@ namespace ns3
 		  // We have a possible destination, create a DO PDU
 		  NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using DO PDU dst: (" << *m_possibleDestination << ")");
 		  Ptr<DO> do_o = Create<DO> ();
-		  do_o->SetPDUPayloadType (NDN_NNN);
+		  do_o->SetPDUPayloadType (ICN_NNN);
 		  do_o->SetLifetime(m_3n_lifetime);
 		  do_o->SetName(*m_possibleDestination);
 		  do_o->SetPayload (retPkt);
@@ -288,7 +288,7 @@ namespace ns3
 	      // We have absolutely no 3N knowledge, use NULLp PDUs
 	      NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using NULLp PDU");
 	      Ptr<NULLp> nullp_o = Create<NULLp> ();
-	      nullp_o->SetPDUPayloadType (NDN_NNN);
+	      nullp_o->SetPDUPayloadType (ICN_NNN);
 	      nullp_o->SetLifetime(m_3n_lifetime);
 	      nullp_o->SetPayload (retPkt);
 	      m_face->ReceiveNULLp(nullp_o);
@@ -299,7 +299,7 @@ namespace ns3
 	      // We have a possible destination, create a DO PDU
 	      NS_LOG_INFO ("> Interest Seq " << std::dec << seq << " using DO PDU dst: (" << *m_possibleDestination << ")");
 	      Ptr<DO> do_o = Create<DO> ();
-	      do_o->SetPDUPayloadType (NDN_NNN);
+	      do_o->SetPDUPayloadType (ICN_NNN);
 	      do_o->SetLifetime(m_3n_lifetime);
 	      do_o->SetName(*m_possibleDestination);
 	      do_o->SetPayload (retPkt);
@@ -408,7 +408,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  Deencapsulate3N(packet);
 	}
@@ -428,7 +428,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  if (*m_possibleDestination != *soObject->GetNamePtr ())
 	    {
@@ -453,7 +453,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  Deencapsulate3N(packet);
 	}
@@ -473,7 +473,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  if (*m_possibleDestination != *duObject->GetSrcNamePtr ())
 	    {

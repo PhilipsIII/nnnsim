@@ -200,7 +200,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  try
 	  {
@@ -268,7 +268,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  try
 	  {
@@ -334,7 +334,7 @@ namespace ns3
       Ptr<Packet> packet = doObject->GetPayload ()->Copy ();
       uint16_t pdutype = doObject->GetPDUPayloadType ();
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  try
 	  {
@@ -395,7 +395,7 @@ namespace ns3
 
       NS_LOG_INFO (this << " obtained pdu type " << pdutype);
 
-      if (pdutype == NDN_NNN)
+      if (pdutype == ICN_NNN)
 	{
 	  try
 	  {
