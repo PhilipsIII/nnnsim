@@ -327,7 +327,7 @@ namespace ns3
       pair_set_by_lease& lease_index = container.get<st_lease> ();
       pair_set_by_lease::iterator it = lease_index.begin();
 
-      std::cout << "NNN Address\t| New Address\t| Lease Expire" << std::endl;
+      std::cout << "NNN Address\t| New Address\t| Lease Expire" << std::endl; //“NNN Address” or “OldAddress”？
       std::cout << "-------------------------------------------------" << std::endl;
 
       while (it != lease_index.end ())
