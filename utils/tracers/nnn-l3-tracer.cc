@@ -23,20 +23,20 @@
 
 #include "nnn-l3-tracer.h"
 
-#include <ns3-dev/ns3/node.h>
-#include <ns3-dev/ns3/packet.h>
-#include <ns3-dev/ns3/config.h>
-#include <ns3-dev/ns3/names.h>
-#include <ns3-dev/ns3/callback.h>
+#include "ns3/node.h"
+#include "ns3/packet.h"
+#include "ns3/config.h"
+#include "ns3/names.h"
+#include "ns3/callback.h"
 
-#include "../../model/nnn-pdus.h"
-#include "../../model/nnn-icn-pdus.h"
-#include "../../model/fw/nnn-forwarding-strategy.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"
+#include "ns3/nnn-forwarding-strategy.h"
 
 #include <boost/lexical_cast.hpp>
 
-#include "../../model/nnn-face.h"
-#include "../../model/pit/nnn-pit-entry.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-pit-entry.h"
 
 using namespace std;
 

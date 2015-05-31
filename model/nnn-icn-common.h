@@ -28,7 +28,7 @@
 #define ICNSIM_MODE 1
 
 #define ICN_NAMESPACE_BEGIN  namespace ns3 { namespace icn {
-#define ICN_NAMESPACE_END    } /*icn*/ } /*ns3*/
+#define ICN_NAMESPACE_END  } /*icn*/ } /*ns3*/
 
 ICN_NAMESPACE_BEGIN
 

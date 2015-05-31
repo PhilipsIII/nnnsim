@@ -23,10 +23,10 @@
 #ifndef NNN_ICN_NAMING_H_
 #define NNN_ICN_NAMING_H_
 
-#include "naming/blob.h"
-#include "naming/error.h"
-#include "naming/name-component.h"
-#include "naming/nnn-icn-exclude.h"
-#include "naming/nnn-icn-name.h"
+#include "ns3/nnn-blob.h"
+#include "ns3/nnn-error.h"
+#include "ns3/nnn-name-component.h"
+#include "ns3/nnn-icn-exclude.h"
+#include "ns3/nnn-icn-name.h"
 
 #endif /* NNN_ICN_NAMING_H_ */

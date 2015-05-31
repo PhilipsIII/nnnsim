@@ -34,8 +34,8 @@
 #include <boost/random/uniform_int_distribution.hpp>
 #include <boost/random/variate_generator.hpp>
 
-#include "../nnn-face.h"
-#include "../nnn-naming.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

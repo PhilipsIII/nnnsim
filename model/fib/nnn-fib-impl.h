@@ -23,13 +23,10 @@
 #ifndef _NNN_FIB_IMPL_H_
 #define	_NNN_FIB_IMPL_H_
 
-#include "nnn-fib.h"
-
-#include "../naming/nnn-icn-exclude.h"
-#include "../naming/nnn-icn-name.h"
-
-#include "../../utils/trie/trie-with-policy.h"
-#include "../../utils/trie/counting-policy.h"
+#include "ns3/nnn-fib.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-trie-with-policy.h"
+#include "ns3/nnn-counting-policy.h"
 
 namespace ns3
 {

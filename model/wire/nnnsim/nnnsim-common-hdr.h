@@ -22,7 +22,7 @@
 
 #include "ns3/ptr.h"
 
-#include "nnnsim-common.h"
+#include "ns3/nnnsim-common.h"
 
 #ifndef NNNSIM_COMMON_HDR_H_
 #define NNNSIM_COMMON_HDR_H_

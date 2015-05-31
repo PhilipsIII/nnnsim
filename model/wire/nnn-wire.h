@@ -24,11 +24,11 @@
 #ifndef NNN_WIRE_H
 #define NNN_WIRE_H
 
-#include <ns3-dev/ns3/buffer.h>
+#include "ns3/buffer.h"
 
-#include "../nnn-common.h"
-#include "../nnn-naming.h"
-#include "../nnn-pdus.h"
+#include "ns3/nnn-common.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-pdus.h"
 
 NNN_NAMESPACE_BEGIN
 

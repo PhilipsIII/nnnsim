@@ -24,9 +24,10 @@
 
 NNN_NAMESPACE_BEGIN
 
-namespace wire {
-  namespace nnnSIM {
-
+namespace wire
+{
+  namespace nnnSIM
+  {
     NS_OBJECT_ENSURE_REGISTERED (DO);
 
     NS_LOG_COMPONENT_DEFINE ("nnn.wire.nnnSIM.DO");

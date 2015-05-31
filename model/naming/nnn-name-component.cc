@@ -4,27 +4,27 @@
  *
  *   This file is part of nnnsim.
  *
- *  name-component.cc is free software: you can redistribute it and/or modify
+ *  nnn-name-component.cc is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  name-component.cc is distributed in the hope that it will be useful,
+ *  nnn-name-component.cc is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with name-component.cc. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-name-component.cc. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  *
  *   Special thanks to University of California for initial implementation
  */
 
-#include "error.h"
-#include "nnn-name-format.h"
-#include "name-component.h"
+#include "ns3/nnn-error.h"
+#include "ns3/nnn-name-format.h"
+#include "nnn-name-component.h"
 
 NNN_NAMESPACE_BEGIN
 

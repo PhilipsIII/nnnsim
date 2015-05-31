@@ -4,18 +4,18 @@
  *
  *   This file is part of nnnsim.
  *
- *  icn-header-helper.cc is free software: you can redistribute it and/or modify
+ *  nnn-icn-header-helper.cc is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  icn-header-helper.cc is distributed in the hope that it will be useful,
+ *  nnn-icn-header-helper.cc is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with icn-header-helper.cc. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-icn-header-helper.cc. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
@@ -25,11 +25,9 @@
 #include "ns3/header.h"
 #include "ns3/object.h"
 
-#include "../model/pdus/icn/data/nnn-icn-data.h"
-#include "../model/pdus/icn/interest/nnn-icn-interest.h"
-
+#include "ns3/nnn-icn-pdus.h"
 #include <iomanip>
-#include "icn-header-helper.h"
+#include "nnn-icn-header-helper.h"
 
 const uint8_t INTEREST_ICN_BYTES[]       = {0x80, 0x00};
 const uint8_t CONTENT_OBJECT_ICN_BYTES[] = {0x80, 0x01};

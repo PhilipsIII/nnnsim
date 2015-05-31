@@ -22,25 +22,25 @@
 
 #include "nnn-pit-impl.h"
 
-#include "../../utils/trie/empty-policy.h"
-#include "../../utils/trie/persistent-policy.h"
-#include "../../utils/trie/random-policy.h"
-#include "../../utils/trie/lru-policy.h"
-#include "../../utils/trie/multi-policy.h"
-#include "../../utils/trie/aggregate-stats-policy.h"
+#include "../../utils/trie/nnn-empty-policy.h"
+#include "../../utils/trie/nnn-persistent-policy.h"
+#include "../../utils/trie/nnn-random-policy.h"
+#include "../../utils/trie/nnn-lru-policy.h"
+#include "../../utils/trie/nnn-multi-policy.h"
+#include "../../utils/trie/nnn-aggregate-stats-policy.h"
 
-#include  "ns3/log.h"
+#include "ns3/log.h"
 
 NS_LOG_COMPONENT_DEFINE ("nnn.pit.PitImpl");
 
-#include "custom-policies/serialized-size-policy.h"
+#include "custom-policies/nnn-serialized-size-policy.h"
 
 #include <boost/lambda/bind.hpp>
 #include <boost/lambda/lambda.hpp>
 
-#include  "ns3/string.h"
-#include  "ns3/uinteger.h"
-#include  "ns3/simulator.h"
+#include "ns3/string.h"
+#include "ns3/uinteger.h"
+#include "ns3/simulator.h"
 
 using namespace boost::tuples;
 using namespace boost;
@@ -63,7 +63,7 @@ namespace ns3
     {
       template<>
       uint32_t
-      PitImpl<nnn::nnnSIM::serialized_size_policy_traits>::GetCurrentSize () const
+      PitImpl<serialized_size_policy_traits>::GetCurrentSize () const
       {
 	return super::getPolicy ().get_current_space_used ();
       }

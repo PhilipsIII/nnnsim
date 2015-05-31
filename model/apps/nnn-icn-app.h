@@ -23,11 +23,12 @@
 #ifndef NNN_ICN_APP_H
 #define NNN_ICN_APP_H
 
-#include "nnn-app.h"
+#include "ns3/nnn-app.h"
 
-#include "../naming/nnn-icn-name.h"
-#include "../nnn-icn-pdus.h"
-#include "../nnn-nnnsim-icn-wire.h"
+#include "ns3/nnn-icn-name.h"
+#include "ns3/nnn-icn-pdus.h"
+#include "ns3/nnn-icn-wire.h"
+#include "ns3/wire-nnnsim-icn.h"
 
 namespace ns3
 {

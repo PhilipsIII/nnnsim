@@ -4,18 +4,18 @@
  *
  *   This file is part of nnnsim.
  *
- *  error.h is free software: you can redistribute it and/or modify
+ *  nnn-error.h is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  error.h is distributed in the hope that it will be useful,
+ *  nnn-error.h is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with error.h. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-error.h. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  *
@@ -23,7 +23,7 @@
  */
 
 /**
- * @file error.h
+ * @file nnn-error.h
  * @brief This file defines basic elements for the library reporting
  *
  * The library throws a number of exceptions.
@@ -47,7 +47,7 @@
 #include <boost/exception/all.hpp>
 #include <boost/throw_exception.hpp>
 
-#include "../nnn-common.h"
+#include "ns3/nnn-common.h"
 
 NNN_NAMESPACE_BEGIN
 

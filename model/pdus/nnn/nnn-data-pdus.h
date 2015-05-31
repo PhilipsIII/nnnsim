@@ -23,7 +23,7 @@
 #ifndef _NNN_DATA_PDUS_H_
 #define _NNN_DATA_PDUS_H_
 
-#include "nnn-pdu.h"
+#include "ns3/nnn-pdu.h"
 
 namespace ns3
 {

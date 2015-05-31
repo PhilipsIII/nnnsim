@@ -31,7 +31,7 @@
 #include "ns3/packet.h"
 #include "ns3/ptr.h"
 
-#include "nnn-face-container.h"
+#include "ns3/nnn-face-container.h"
 
 namespace ns3
 {

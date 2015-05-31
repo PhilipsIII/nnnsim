@@ -34,8 +34,8 @@
 #include <boost/multi_index/ordered_index.hpp>
 #include <boost/multi_index/member.hpp>
 
-#include "../../utils/nnn-rtt-estimator.h"
-#include "nnn-icn-app.h"
+#include "ns3/nnn-rtt-estimator.h"
+#include "ns3/nnn-icn-app.h"
 
 namespace ns3
 {

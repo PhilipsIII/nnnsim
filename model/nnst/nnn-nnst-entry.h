@@ -37,14 +37,14 @@
 #include "ns3/simulator.h"
 #include "ns3/traced-value.h"
 
-#include "nnn-nnst.h"
-#include "nnn-nnst-entry-facemetric.h"
-#include "../nnn-naming.h"
-#include "../nnn-face.h"
-#include "../../utils/trie/trie.h"
-#include "../../utils/trie/counting-policy.h"
-#include "../../utils/trie/trie-with-policy.h"
-#include "../../helper/nnn-face-container.h"
+#include "ns3/nnn-nnst.h"
+#include "ns3/nnn-nnst-entry-facemetric.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-trie.h"
+#include "ns3/nnn-counting-policy.h"
+#include "ns3/nnn-trie-with-policy.h"
+#include "ns3/nnn-face-container.h"
 
 using namespace ::boost;
 using namespace ::boost::multi_index;

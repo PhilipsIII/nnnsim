@@ -28,8 +28,8 @@
 #include "ns3/nstime.h"
 #include "ns3/buffer.h"
 
-#include "../nnn-common.h"
-#include "../nnn-naming.h"
+#include "ns3/nnn-common.h"
+#include "ns3/nnn-naming.h"
 
 NNN_NAMESPACE_BEGIN
 

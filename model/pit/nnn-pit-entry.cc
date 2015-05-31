@@ -22,11 +22,11 @@
 
 #include "nnn-pit-entry.h"
 
-#include "nnn-pit.h"
-#include "../fib/nnn-fib.h"
+#include "ns3/nnn-pit.h"
+#include "ns3/nnn-fib.h"
 
-#include "../nnn-icn-naming.h"
-#include "../nnn-icn-pdus.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-icn-pdus.h"
 
 #include "ns3/log.h"
 #include "ns3/packet.h"

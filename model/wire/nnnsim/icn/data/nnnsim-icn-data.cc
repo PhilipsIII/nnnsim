@@ -22,7 +22,7 @@
  *
  */
 
-#include "nnnsim-icn-data.h"
+#include "ns3/nnnsim-icn-data.h"
 
 namespace ns3
 {

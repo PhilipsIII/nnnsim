@@ -4,31 +4,30 @@
  *
  *   This file is part of nnnsim.
  *
- *  content-store-nocache.cc is free software: you can redistribute it and/or modify
+ *  nnn-content-store-nocache.cc is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  content-store-nocache.cc is distributed in the hope that it will be useful,
+ *  nnn-content-store-nocache.cc is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with content-store-nocache.cc. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-content-store-nocache.cc. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Alexander Afanasyev <alexander.afanasyev@ucla.edu>
  *  Modified for nnnsim by Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "content-store-nocache.h"
+#include "nnn-content-store-nocache.h"
 
 #include "ns3/log.h"
 #include "ns3/packet.h"
 
-#include "../naming/nnn-icn-name.h"
-#include "../naming/nnn-icn-exclude.h"
-#include "../nnn-icn-pdus.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-icn-pdus.h"
 
 namespace ns3
 {

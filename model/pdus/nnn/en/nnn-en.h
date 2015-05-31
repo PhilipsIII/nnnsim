@@ -24,8 +24,8 @@
 #ifndef _NNN_EN_HEADER_H_
 #define _NNN_EN_HEADER_H_
 
-#include "../nnn-pdu.h"
-#include "../nnn-en-pdus.h"
+#include "ns3/nnn-pdu.h"
+#include "ns3/nnn-en-pdus.h"
 
 namespace ns3
 {

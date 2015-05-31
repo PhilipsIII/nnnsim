@@ -20,13 +20,13 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "apps/nnn-icn-app.h"
+#include "ns3/nnn-icn-app.h"
 
 #include "ns3/log.h"
 
 #include "nnn-icn-app-face.h"
-#include "nnn-pdus.h"
-#include "nnn-icn-pdus.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"
 
 namespace ns3
 {

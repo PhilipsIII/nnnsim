@@ -32,8 +32,8 @@
 
 #include "nnn-link-control-helper.h"
 
-#include "../model/nnn-l3-protocol.h"
-#include "../model/nnn-net-device-face.h"
+#include "ns3/nnn-l3-protocol.h"
+#include "ns3/nnn-net-device-face.h"
 
 namespace ns3
 {

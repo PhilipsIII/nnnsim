@@ -4,29 +4,29 @@
  *
  *   This file is part of nnnsim.
  *
- *  content-store-with-freshness.cc is free software: you can redistribute it and/or modify
+ *  nnn-content-store-with-freshness.cc is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  content-store-with-freshness.cc is distributed in the hope that it will be useful,
+ *  nnn-content-store-with-freshness.cc is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with content-store-with-freshness.cc. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-content-store-with-freshness.cc. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Alexander Afanasyev <alexander.afanasyev@ucla.edu>
  *  Modified for nnnsim by Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "content-store-with-freshness.h"
+#include "nnn-content-store-with-freshness.h"
 
-#include "../../utils/trie/random-policy.h"
-#include "../../utils/trie/lru-policy.h"
-#include "../../utils/trie/fifo-policy.h"
-#include "../../utils/trie/lfu-policy.h"
+#include "ns3/nnn-random-policy.h"
+#include "ns3/nnn-lru-policy.h"
+#include "ns3/nnn-fifo-policy.h"
+#include "ns3/nnn-lfu-policy.h"
 
 #define NS_OBJECT_ENSURE_REGISTERED_TEMPL(type, templ)  \
     static struct X ## type ## templ ## RegistrationClass \

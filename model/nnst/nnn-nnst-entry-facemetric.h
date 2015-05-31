@@ -28,7 +28,7 @@
 #include "ns3/simulator.h"
 #include "ns3/traced-value.h"
 
-#include "../nnn-face.h"
+#include "ns3/nnn-face.h"
 
 #define NNN_RTO_ALPHA 0.125
 #define NNN_RTO_BETA 0.25

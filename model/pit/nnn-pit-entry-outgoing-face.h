@@ -23,10 +23,10 @@
 #ifndef _NNN_PIT_ENTRY_OUTGOING_FACE_H_
 #define	_NNN_PIT_ENTRY_OUTGOING_FACE_H_
 
-#include <ns3-dev/ns3/nstime.h>
-#include <ns3-dev/ns3/ptr.h>
+#include "ns3/nstime.h"
+#include "ns3/ptr.h"
 
-#include "../nnn-face.h"
+#include "ns3/nnn-face.h"
 
 namespace ns3
 {

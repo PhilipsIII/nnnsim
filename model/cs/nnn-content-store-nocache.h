@@ -4,18 +4,18 @@
  *
  *   This file is part of nnnsim.
  *
- *  content-store-nocache.h is free software: you can redistribute it and/or modify
+ *  nnn-content-store-nocache.h is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  content-store-nocache.h is distributed in the hope that it will be useful,
+ *  nnn-content-store-nocache.h is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with content-store-nocache.h. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-content-store-nocache.h. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Alexander Afanasyev <alexander.afanasyev@ucla.edu>
  *  Modified for nnnsim by Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
@@ -24,7 +24,7 @@
 #ifndef ICN_CONTENT_STORE_NOCACHE_H
 #define	ICN_CONTENT_STORE_NOCACHE_H
 
-#include "nnn-icn-content-store.h"
+#include "ns3/nnn-icn-content-store.h"
 
 namespace ns3
 {

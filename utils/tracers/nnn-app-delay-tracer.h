@@ -24,11 +24,11 @@
 #ifndef NNN_APP_DELAY_TRACER_H_
 #define NNN_APP_DELAY_TRACER_H_
 
-#include <ns3-dev/ns3/ptr.h>
-#include <ns3-dev/ns3/simple-ref-count.h>
-#include <ns3-dev/ns3/nstime.h>
-#include <ns3-dev/ns3/event-id.h>
-#include <ns3-dev/ns3/node-container.h>
+#include "ns3/ptr.h"
+#include "ns3/simple-ref-count.h"
+#include "ns3/nstime.h"
+#include "ns3/event-id.h"
+#include "ns3/node-container.h"
 
 #include <boost/tuple/tuple.hpp>
 #include <boost/shared_ptr.hpp>

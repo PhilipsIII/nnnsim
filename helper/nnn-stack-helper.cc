@@ -42,25 +42,24 @@
 #include "ns3/simulator.h"
 #include "ns3/string.h"
 
-#include "nnn-names-container.h"
-#include "nnn-face-container.h"
+#include "ns3/nnn-names-container.h"
+#include "ns3/nnn-face-container.h"
 
-#include "../model/nnn-net-device-face.h"
-#include "../model/nnn-l3-protocol.h"
-#include "../model/nnn-naming.h"
-#include "../model/naming/nnn-icn-name.h"
-#include "../model/naming/nnn-icn-exclude.h"
-#include "../model/nnst/nnn-nnst.h"
-#include "../model/nnst/nnn-nnst-entry.h"
-#include "../model/nnpt/nnn-nnpt.h"
-#include "../model/nnpt/nnn-nnpt-entry.h"
-#include "../model/fib/nnn-fib.h"
-#include "../model/pit/nnn-pit.h"
-#include "../model/cs/nnn-icn-content-store.h"
+#include "ns3/nnn-net-device-face.h"
+#include "ns3/nnn-l3-protocol.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-nnst.h"
+#include "ns3/nnn-nnst-entry.h"
+#include "ns3/nnn-nnpt.h"
+#include "ns3/nnn-nnpt-entry.h"
+#include "ns3/nnn-fib.h"
+#include "ns3/nnn-pit.h"
+#include "ns3/nnn-icn-content-store.h"
 
-#include "../utils/nnn-limits.h"
+#include "ns3/nnn-limits.h"
 
-#include "../model/fw/nnn-forwarding-strategy.h"
+#include "ns3/nnn-forwarding-strategy.h"
 
 #include <boost/foreach.hpp>
 #include <boost/lexical_cast.hpp>

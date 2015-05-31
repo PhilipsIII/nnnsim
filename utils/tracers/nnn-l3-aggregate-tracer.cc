@@ -31,10 +31,10 @@
 #include "ns3/node-list.h"
 #include "ns3/log.h"
 
-#include "../../model/nnn-pdus.h"
-#include "../../model/nnn-icn-pdus.h"
-#include "../../model/nnn-face.h"
-#include "../../model/pit/nnn-pit-entry.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-pit-entry.h"
 
 #include <fstream>
 

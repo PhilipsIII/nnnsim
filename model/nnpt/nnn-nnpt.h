@@ -36,8 +36,8 @@
 #include <boost/multi_index/identity.hpp>
 #include <boost/multi_index/member.hpp>
 
-#include "nnn-nnpt-entry.h"
-#include "../nnn-naming.h"
+#include "ns3/nnn-nnpt-entry.h"
+#include "ns3/nnn-naming.h"
 
 using boost::multi_index_container;
 using namespace ::boost::multi_index;

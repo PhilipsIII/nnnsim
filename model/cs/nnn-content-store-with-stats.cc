@@ -21,12 +21,12 @@
  *  Modified for nnnsim by Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "content-store-with-stats.h"
+#include "nnn-content-store-with-stats.h"
 
-#include "../../utils/trie/random-policy.h"
-#include "../../utils/trie/lru-policy.h"
-#include "../../utils/trie/fifo-policy.h"
-#include "../../utils/trie/lfu-policy.h"
+#include "ns3/nnn-random-policy.h"
+#include "ns3/nnn-lru-policy.h"
+#include "ns3/nnn-fifo-policy.h"
+#include "ns3/nnn-lfu-policy.h"
 
 #define NS_OBJECT_ENSURE_REGISTERED_TEMPL(type, templ)  \
   static struct X ## type ## templ ## RegistrationClass \

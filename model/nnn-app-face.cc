@@ -29,11 +29,11 @@
 #include "ns3/node.h"
 #include "ns3/simulator.h"
 
-#include "apps/nnn-app.h"
+#include "ns3/nnn-app.h"
 #include "nnn-app-face.h"
-#include "nnn-pdus.h"
+#include "ns3/nnn-pdus.h"
 
-#include "../helper/nnn-header-helper.h"
+#include "ns3/nnn-header-helper.h"
 
 namespace ns3
 {

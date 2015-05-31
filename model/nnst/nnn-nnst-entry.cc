@@ -36,9 +36,9 @@ namespace ll = boost::lambda;
 #include "ns3/simulator.h"
 
 #include "nnn-nnst-entry.h"
-#include "nnn-nnst-entry-facemetric.h"
+#include "ns3/nnn-nnst-entry-facemetric.h"
 
-#include "../nnn-naming.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

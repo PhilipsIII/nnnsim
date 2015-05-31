@@ -24,7 +24,7 @@
 #ifndef NNN_L3_AGGREGATE_TRACER_H_
 #define NNN_L3_AGGREGATE_TRACER_H_
 
-#include "nnn-l3-tracer.h"
+#include "ns3/nnn-l3-tracer.h"
 
 #include "ns3/nstime.h"
 #include "ns3/event-id.h"

@@ -25,10 +25,8 @@
 #include "ns3/log.h"
 #include "ns3/packet.h"
 
-#include "../naming/nnn-icn-name.h"
-#include "../naming/nnn-icn-exclude.h"
-
-#include "../nnn-icn-pdus.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-icn-pdus.h"
 
 namespace ns3
 {

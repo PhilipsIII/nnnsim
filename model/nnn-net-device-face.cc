@@ -31,8 +31,8 @@
 
 #include "nnn-net-device-face.h"
 
-#include "naming/nnn-address.h"
-#include "nnn-l3-protocol.h"
+#include "ns3/nnn-address.h"
+#include "ns3/nnn-l3-protocol.h"
 
 namespace ns3
 {

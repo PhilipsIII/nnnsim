@@ -25,8 +25,7 @@
 
 #include <queue>
 
-#include "../nnn-nnnsim-wire.h"
-#include "../nnn-pdus.h"
+#include "ns3/nnn-pdus.h"
 
 namespace ns3
 {

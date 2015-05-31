@@ -4,24 +4,24 @@
  *
  *   This file is part of nnnsim.
  *
- *  freshness-policy.h is free software: you can redistribute it and/or modify
+ *  nnn-lifetime-stats-policy.h is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  freshness-policy.h is distributed in the hope that it will be useful,
+ *  nnn-lifetime-stats-policy.h is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU Affero General Public License for more details.
  *
  *  You should have received a copy of the GNU Affero General Public License
- *  along with freshness-policy.h. If not, see <http://www.gnu.org/licenses/>.
+ *  along with nnn-lifetime-stats-policy.h. If not, see <http://www.gnu.org/licenses/>.
  *
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#ifndef FRESHNESS_POLICY_H_
-#define FRESHNESS_POLICY_H_
+#ifndef LIFETIME_STATS_POLICY_H_
+#define LIFETIME_STATS_POLICY_H_
 
 #include <boost/intrusive/options.hpp>
 #include <boost/intrusive/list.hpp>
@@ -37,14 +37,14 @@ namespace ns3
     namespace nnnSIM
     {
       /**
-       * @brief Traits for freshness policy
+       * @brief Traits for lifetime stats policy
        */
-      struct freshness_policy_traits
+      struct lifetime_stats_policy_traits
       {
 	/// @brief Name that can be used to identify the policy (for NS-3 object model and logging)
-	static std::string GetName () { return "Freshness"; }
+	static std::string GetName () { return "LifetimeStats"; }
 
-	struct policy_hook_type : public boost::intrusive::set_member_hook<> { Time timeWhenShouldExpire; };
+	struct policy_hook_type : public boost::intrusive::list_member_hook<> { Time timeWhenAdded; };
 
 	template<class Container>
 	struct container_hook
@@ -59,64 +59,45 @@ namespace ns3
 	class Hook>
 	struct policy
 	{
-	  static Time& get_freshness (typename Container::iterator item)
+	  typedef typename boost::intrusive::list< Container, Hook > policy_container;
+
+	  static Time& get_time (typename Container::iterator item)
 	  {
 	    return static_cast<typename policy_container::value_traits::hook_type*>
-	    (policy_container::value_traits::to_node_ptr(*item))->timeWhenShouldExpire;
+	    (policy_container::value_traits::to_node_ptr(*item))->timeWhenAdded;
 	  }
 
-	  static const Time& get_freshness (typename Container::const_iterator item)
+	  static const Time& get_time (typename Container::const_iterator item)
 	  {
 	    return static_cast<const typename policy_container::value_traits::hook_type*>
-	    (policy_container::value_traits::to_node_ptr(*item))->timeWhenShouldExpire;
+	    (policy_container::value_traits::to_node_ptr(*item))->timeWhenAdded;
 	  }
-
-	  template<class Key>
-	  struct MemberHookLess
-	  {
-	    bool operator () (const Key &a, const Key &b) const
-	    {
-	      return get_freshness (&a) < get_freshness (&b);
-	    }
-	  };
-
-	  typedef boost::intrusive::multiset< Container,
-	      boost::intrusive::compare< MemberHookLess< Container > >,
-	      Hook > policy_container;
-
 
 	  class type : public policy_container
 	  {
 	  public:
-	    typedef policy policy_base; // to get access to get_freshness methods from outside
+	    typedef policy policy_base; // to get access to get_time methods from outside
 	    typedef Container parent_trie;
 
 	    type (Base &base)
 	    : base_ (base)
 	    , max_size_ (100)
+	    , m_willRemoveEntry (0)
 	    {
 	    }
 
 	    inline void
 	    update (typename parent_trie::iterator item)
 	    {
-	      // do nothing
+	      // do nothing. it's random policy
 	    }
 
 	    inline bool
 	    insert (typename parent_trie::iterator item)
 	    {
-	      // get_time (item) = Simulator::Now ();
-	      Time freshness = item->payload ()->GetData ()->GetFreshness ();
-	      if (!freshness.IsZero ())
-		{
-		  get_freshness (item) = Simulator::Now () + freshness;
+	      get_time (item) = Simulator::Now ();
 
-		  // push item only if freshness is non zero. otherwise, this payload is not controlled by the policy
-		  // note that .size() on this policy would return only number of items with non-infinite freshness policy
-		  policy_container::insert (*item);
-		}
-
+	      policy_container::push_back (*item);
 	      return true;
 	    }
 
@@ -129,11 +110,14 @@ namespace ns3
 	    inline void
 	    erase (typename parent_trie::iterator item)
 	    {
-	      if (!item->payload ()->GetData ()->GetFreshness ().IsZero ())
+	      Time lifetime = Simulator::Now () - get_time (item);
+
+	      if (m_willRemoveEntry != 0)
 		{
-		  // erase only if freshness is non zero (otherwise an item is not in the policy
-		  policy_container::erase (policy_container::s_iterator_to (*item));
+		  (*m_willRemoveEntry) (item->payload (), lifetime);
 		}
+
+	      policy_container::erase (policy_container::s_iterator_to (*item));
 	    }
 
 	    inline void
@@ -154,12 +138,20 @@ namespace ns3
 	      return max_size_;
 	    }
 
+	    void
+	    set_traced_callback (TracedCallback< typename parent_trie::payload_traits::const_base_type, Time > *callback)
+	    {
+	      m_willRemoveEntry = callback;
+	    }
+
 	  private:
 	    type () : base_(*((Base*)0)) { };
 
 	  private:
 	    Base &base_;
 	    size_t max_size_;
+
+	    TracedCallback< typename parent_trie::payload_traits::const_base_type, Time > *m_willRemoveEntry;
 	  };
 	};
       };

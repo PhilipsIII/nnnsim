@@ -20,19 +20,20 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "../../nnnsim-common-hdr.h"
-#include "../../nnnsim-common.h"
+#include "ns3/nnnsim-common-hdr.h"
+#include "ns3/nnnsim-common.h"
+
 NNN_NAMESPACE_BEGIN
 /**
  * @brief Namespace encapsulating wire operations
  */
-namespace wire {
-
+namespace wire
+{
   /**
    * @brief Namespace for nnnSIM wire format operations
    */
-  namespace nnnSIM {
-
+  namespace nnnSIM
+  {
     /**
      * @brief Routines to serialize/deserialize SO packets in nnnSIM format
      */

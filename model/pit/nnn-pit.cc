@@ -20,25 +20,23 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
+#include "nnn-pit.h"
+
+#include "ns3/nnn-icn-pdus.h"
+
 #include "ns3/log.h"
 #include "ns3/nstime.h"
 #include "ns3/uinteger.h"
 #include "ns3/simulator.h"
 #include "ns3/packet.h"
 
-#include "../naming/nnn-icn-exclude.h"
-#include "../naming/nnn-icn-name.h"
-#include "../nnn-icn-pdus.h"
-
 #include <boost/lambda/bind.hpp>
 #include <boost/lambda/lambda.hpp>
 
-#include "nnn-pit.h"
+NS_LOG_COMPONENT_DEFINE ("nnn.Pit");
 
 namespace ns3
 {
-  NS_LOG_COMPONENT_DEFINE ("nnn.Pit");
-
   namespace nnn
   {
     NS_OBJECT_ENSURE_REGISTERED (Pit);

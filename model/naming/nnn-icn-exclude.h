@@ -29,8 +29,8 @@
 #include "ns3/simple-ref-count.h"
 #include <map>
 
-#include "name-component.h"
-#include "../nnn-icn-common.h"
+#include "ns3/nnn-name-component.h"
+#include "ns3/nnn-icn-common.h"
 
 ICN_NAMESPACE_BEGIN
 

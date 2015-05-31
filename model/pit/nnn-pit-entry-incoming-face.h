@@ -26,8 +26,8 @@
 #include "ns3/nstime.h"
 #include "ns3/ptr.h"
 
-#include "../nnn-face.h"
-#include "../addr-aggr/nnn-addr-aggregator.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-addr-aggregator.h"
 
 namespace ns3
 {

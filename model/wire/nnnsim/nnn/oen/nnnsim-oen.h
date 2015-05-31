@@ -23,8 +23,7 @@
 #ifndef _NNNSIM_OEN_H_
 #define _NNNSIM_OEN_H_
 
-#include "../../nnnsim-common-hdr.h"
-#include "../../nnnsim-common.h"
+#include "ns3/nnnsim-common-hdr.h"
 
 namespace ns3
 {

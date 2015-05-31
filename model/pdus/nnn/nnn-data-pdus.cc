@@ -20,7 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "nnn-data-pdus.h"
+#include "ns3/nnn-data-pdus.h"
 
 namespace ns3
 {

@@ -35,9 +35,9 @@
 #include <boost/multi_index/member.hpp>
 #include <boost/multi_index/mem_fun.hpp>
 
-#include "../nnn-face.h"
-#include "../naming/nnn-icn-name.h"
-#include "../../utils/nnn-limits.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-icn-name.h"
+#include "ns3/nnn-limits.h"
 
 namespace ns3
 {

@@ -22,23 +22,23 @@
  */
 #include "nnn-app-delay-tracer.h"
 
-#include <ns3-dev/ns3/node.h>
-#include <ns3-dev/ns3/packet.h>
-#include <ns3-dev/ns3/config.h>
-#include <ns3-dev/ns3/names.h>
-#include <ns3-dev/ns3/callback.h>
-#include <ns3-dev/ns3/simulator.h>
-#include <ns3-dev/ns3/node-list.h>
-#include <ns3-dev/ns3/log.h>
+#include "ns3/node.h"
+#include "ns3/packet.h"
+#include "ns3/config.h"
+#include "ns3/names.h"
+#include "ns3/callback.h"
+#include "ns3/simulator.h"
+#include "ns3/node-list.h"
+#include "ns3/log.h"
 
-#include "../../model/nnn-icn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"
 
 #include <boost/lexical_cast.hpp>
 #include <boost/make_shared.hpp>
 
 #include <fstream>
 
-#include "../../model/apps/nnn-app.h"
+#include "ns3/nnn-app.h"
 
 NS_LOG_COMPONENT_DEFINE ("nnn.AppDelayTracer");
 

@@ -27,9 +27,8 @@
 #include "ns3/nstime.h"
 #include "ns3/ptr.h"
 
-#include "../nnn-icn-common.h"
-#include "../naming/nnn-icn-name.h"
-#include "../naming/nnn-icn-exclude.h"
+#include "ns3/nnn-icn-common.h"
+#include "ns3/nnn-icn-naming.h"
 
 ICN_NAMESPACE_BEGIN
 

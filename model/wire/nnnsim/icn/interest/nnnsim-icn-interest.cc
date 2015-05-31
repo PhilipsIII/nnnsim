@@ -20,7 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "nnnsim-icn-interest.h"
+#include "ns3/nnnsim-icn-interest.h"
 
 namespace ns3
 {

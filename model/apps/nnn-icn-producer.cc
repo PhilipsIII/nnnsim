@@ -32,11 +32,12 @@
 namespace ll = boost::lambda;
 
 #include "nnn-icn-producer.h"
-#include "../../helper/icn-header-helper.h"
-#include "../nnn-app-face.h"
-#include "../fib/nnn-fib.h"
-#include "../fw/nnn-forwarding-strategy.h"
-#include "../../utils/nnn-fw-hop-count-tag.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-header-helper.h"
+#include "ns3/nnn-app-face.h"
+#include "ns3/nnn-fib.h"
+#include "ns3/nnn-forwarding-strategy.h"
+#include "ns3/nnn-fw-hop-count-tag.h"
 
 namespace ns3
 {

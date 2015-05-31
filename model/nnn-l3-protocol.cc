@@ -33,14 +33,14 @@
 #include "ns3/trace-source-accessor.h"
 #include "ns3/uinteger.h"
 
-#include "nnn-l3-protocol.h"
-#include "nnn-face.h"
-#include "nnn-pdus.h"
-#include "nnn-net-device-face.h"
+#include "ns3/nnn-l3-protocol.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-net-device-face.h"
 
-#include "fw/nnn-forwarding-strategy.h"
-#include "nnst/nnn-nnst.h"
-#include "pit/nnn-pit.h"
+#include "ns3/nnn-forwarding-strategy.h"
+#include "ns3/nnn-nnst.h"
+#include "ns3/nnn-pit.h"
 
 namespace ns3
 {

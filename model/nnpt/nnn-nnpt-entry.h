@@ -37,13 +37,13 @@
 #include "ns3/nstime.h"
 #include "ns3/traced-value.h"
 
-#include "../nnn-naming.h"
-#include "../nnn-face.h"
-#include "../../utils/trie/trie.h"
-#include "../../utils/trie/counting-policy.h"
-#include "../../utils/trie/trie-with-policy.h"
-#include "../../helper/nnn-face-container.h"
-#include "../nnn-naming.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-trie.h"
+#include "ns3/nnn-counting-policy.h"
+#include "ns3/nnn-trie-with-policy.h"
+#include "ns3/nnn-face-container.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

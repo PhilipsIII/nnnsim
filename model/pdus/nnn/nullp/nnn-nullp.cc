@@ -20,7 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include <ns3-dev/ns3/log.h>
+#include "ns3/log.h"
 
 #include "nnn-nullp.h"
 

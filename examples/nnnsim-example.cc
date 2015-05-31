@@ -1,10 +1,9 @@
 /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
 
 #include "ns3/core-module.h"
-#include "ns3/nnnsim-helper.h"
+#include "ns3/nnnsim-module.h"
 
 using namespace ns3;
-
 
 int 
 main (int argc, char *argv[])

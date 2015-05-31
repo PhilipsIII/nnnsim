@@ -27,7 +27,7 @@
 #include "ns3/nstime.h"
 #include "ns3/address.h"
 
-#include "nnn-pdu.h"
+#include "ns3/nnn-pdu.h"
 
 namespace ns3
 {

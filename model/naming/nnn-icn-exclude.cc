@@ -25,7 +25,7 @@
 
 #include "nnn-icn-exclude.h"
 
-#include "error.h"
+#include "ns3/nnn-error.h"
 
 ICN_NAMESPACE_BEGIN
 

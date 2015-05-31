@@ -28,7 +28,7 @@
 #include "ns3/random-variable-stream.h"
 #include "ns3/node.h"
 
-#include "../model/nnn-face.h"
+#include "ns3/nnn-face.h"
 
 namespace ns3
 {

@@ -25,8 +25,9 @@
 #include "ns3/log.h"
 #include "ns3/tag-buffer.h"
 
-#include "../wire-nnnsim.h"
-#include "../wire-nnnsim-icn.h"
-#include "../../nnn-common.h"
-#include "../../nnn-pdus.h"
-#include "../../nnn-icn-pdus.h"
+#include "ns3/nnn-common.h"
+
+#include "ns3/wire-nnnsim.h"
+#include "ns3/wire-nnnsim-icn.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"

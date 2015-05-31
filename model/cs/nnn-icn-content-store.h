@@ -23,9 +23,9 @@
 #ifndef NNN_ICN_CONTENT_STORE_H
 #define	NNN_ICN_CONTENT_STORE_H
 
-#include <ns3-dev/ns3/object.h>
-#include <ns3-dev/ns3/ptr.h>
-#include <ns3-dev/ns3/traced-callback.h>
+#include "ns3/object.h"
+#include "ns3/ptr.h"
+#include "ns3/traced-callback.h"
 
 #include <boost/tuple/tuple.hpp>
 

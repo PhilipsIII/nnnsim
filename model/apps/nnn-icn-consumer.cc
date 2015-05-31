@@ -19,6 +19,7 @@
  *
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
+
 #include "ns3/callback.h"
 #include "ns3/double.h"
 #include "ns3/integer.h"
@@ -33,12 +34,13 @@
 #include <boost/ref.hpp>
 
 #include "nnn-icn-consumer.h"
-#include "../nnn-icn-app-face.h"
-#include "../fw/nnn-forwarding-strategy.h"
-#include "../../helper/icn-header-helper.h"
-#include "../../utils/nnn-rtt-estimator.h"
-#include "../../utils/nnn-fw-hop-count-tag.h"
-#include "../../utils/nnn-rtt-mean-deviation.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-icn-app-face.h"
+#include "ns3/nnn-forwarding-strategy.h"
+#include "ns3/nnn-icn-header-helper.h"
+#include "ns3/nnn-rtt-estimator.h"
+#include "ns3/nnn-fw-hop-count-tag.h"
+#include "ns3/nnn-rtt-mean-deviation.h"
 
 namespace ns3
 {

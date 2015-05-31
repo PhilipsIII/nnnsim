@@ -28,8 +28,8 @@
 #include <boost/archive/iterators/transform_width.hpp>
 #include <boost/iterator/transform_iterator.hpp>
 
-#include "error.h"
-#include "../nnn-common.h"
+#include "ns3/nnn-error.h"
+#include "ns3/nnn-common.h"
 
 NNN_NAMESPACE_BEGIN
 

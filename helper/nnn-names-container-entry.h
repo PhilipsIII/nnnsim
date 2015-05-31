@@ -36,8 +36,8 @@
 #include "ns3/object.h"
 #include "ns3/simple-ref-count.h"
 
-#include "nnn-names-container-entry.h"
-#include "../model/nnn-naming.h"
+#include "ns3/nnn-names-container-entry.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

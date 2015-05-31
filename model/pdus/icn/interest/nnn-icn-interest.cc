@@ -29,8 +29,6 @@
 #include "ns3/unused.h"
 #include "ns3/packet.h"
 
-
-
 namespace ns3
 {
   NS_LOG_COMPONENT_DEFINE ("nnn.icn.Interest");

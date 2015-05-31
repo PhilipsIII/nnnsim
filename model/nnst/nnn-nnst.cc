@@ -28,7 +28,7 @@
 namespace ll = boost::lambda;
 
 #include "nnn-nnst.h"
-#include "nnn-nnst-entry.h"
+#include "ns3/nnn-nnst-entry.h"
 
 namespace ns3
 {

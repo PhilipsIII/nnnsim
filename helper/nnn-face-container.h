@@ -27,7 +27,7 @@
 #include "ns3/node.h"
 #include "ns3/simple-ref-count.h"
 
-#include "../model/nnn-face.h"
+#include "ns3/nnn-face.h"
 
 namespace ns3
 {

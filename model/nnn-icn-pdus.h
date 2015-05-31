@@ -20,5 +20,5 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "pdus/icn/data/nnn-icn-data.h"
-#include "pdus/icn/interest/nnn-icn-interest.h"
+#include "ns3/nnn-icn-data.h"
+#include "ns3/nnn-icn-interest.h"

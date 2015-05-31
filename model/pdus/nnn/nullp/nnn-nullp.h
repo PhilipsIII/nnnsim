@@ -23,8 +23,8 @@
 #ifndef _NNN_NULLP_HEADER_H_
 #define _NNN_NULLP_HEADER_H_
 
-#include "../nnn-pdu.h"
-#include "../nnn-data-pdus.h"
+#include "ns3/nnn-pdu.h"
+#include "ns3/nnn-data-pdus.h"
 
 namespace ns3
 {

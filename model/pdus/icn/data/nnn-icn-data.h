@@ -31,8 +31,8 @@
 #include "ns3/packet.h"
 #include "ns3/ptr.h"
 
-#include "../../../naming/nnn-icn-name.h"
-#include "../../../nnn-naming.h"
+#include "ns3/nnn-icn-name.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

@@ -32,8 +32,8 @@
 #include "ns3/attribute-helper.h"
 #include "ns3/simple-ref-count.h"
 
-#include "../nnn-common.h"
-#include "name-component.h"
+#include "ns3/nnn-common.h"
+#include "ns3/nnn-name-component.h"
 
 #define SEP '.'
 #define MAXCOMP 16

@@ -25,7 +25,7 @@
 
 #include "ns3/ptr.h"
 
-#include "nnn-icn-app.h"
+#include "ns3/nnn-icn-app.h"
 
 namespace ns3
 {

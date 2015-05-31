@@ -20,9 +20,9 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "ns3/simulator.h"
-
 #include "nnn-pit-entry-outgoing-face.h"
+
+#include "ns3/simulator.h"
 
 namespace ns3
 {

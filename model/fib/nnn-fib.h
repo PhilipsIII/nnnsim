@@ -26,7 +26,7 @@
 #include "ns3/node.h"
 #include "ns3/simple-ref-count.h"
 
-#include "nnn-fib-entry.h"
+#include "ns3/nnn-fib-entry.h"
 
 namespace ns3
 {

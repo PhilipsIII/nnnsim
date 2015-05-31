@@ -27,8 +27,7 @@
 #define NDN_RTO_BETA 0.25
 #define NDN_RTO_K 4
 
-#include "../naming/nnn-icn-exclude.h"
-#include "../naming/nnn-icn-name.h"
+#include "ns3/nnn-icn-naming.h"
 
 #include <boost/lambda/bind.hpp>
 #include <boost/lambda/lambda.hpp>
@@ -36,7 +35,7 @@
 
 namespace ll = boost::lambda;
 
-#include "nnn-fib.h"
+#include "ns3/nnn-fib.h"
 #include "nnn-fib-entry.h"
 
 namespace ns3

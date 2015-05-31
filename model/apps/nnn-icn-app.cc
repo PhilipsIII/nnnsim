@@ -28,11 +28,11 @@
 #include "ns3/packet.h"
 #include "ns3/string.h"
 
-#include "../../helper/nnn-header-helper.h"
-#include "../nnn-icn-app-face.h"
-#include "../nnn-l3-protocol.h"
-#include "../buffers/nnn-pdu-buffer-queue.h"
-#include "../fw/nnn-forwarding-strategy.h"
+#include "ns3/nnn-header-helper.h"
+#include "ns3/nnn-icn-app-face.h"
+#include "ns3/nnn-l3-protocol.h"
+#include "ns3/nnn-pdu-buffer-queue.h"
+#include "ns3/nnn-forwarding-strategy.h"
 
 namespace ns3
 {

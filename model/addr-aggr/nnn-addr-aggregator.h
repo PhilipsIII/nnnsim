@@ -23,9 +23,9 @@
 #ifndef NNN_ADDR_AGGREGATOR_H_
 #define NNN_ADDR_AGGREGATOR_H_
 
-#include "../naming/nnn-address.h"
-#include "../../utils/trie/trie-with-policy.h"
-#include "../../utils/trie/counting-policy.h"
+#include "ns3/nnn-address.h"
+#include "ns3/nnn-trie-with-policy.h"
+#include "ns3/nnn-counting-policy.h"
 
 namespace ns3
 {

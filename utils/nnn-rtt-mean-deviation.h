@@ -28,7 +28,7 @@
 #ifndef ICN_RTT_MEAN_DEVIATION_H
 #define ICN_RTT_MEAN_DEVIATION_H
 
-#include "nnn-rtt-estimator.h"
+#include "ns3/nnn-rtt-estimator.h"
 
 namespace ns3 {
   namespace nnn {

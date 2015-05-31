@@ -24,6 +24,9 @@
 
 #include "nnn-pdu-buffer-queue.h"
 
+#include "ns3/nnn-wire.h"
+#include "ns3/wire-nnnsim.h"
+
 namespace ns3
 {
   namespace nnn

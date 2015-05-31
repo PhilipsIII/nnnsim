@@ -20,11 +20,11 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "ns3/simulator.h"
-
 #include "nnn-pit-entry-incoming-face.h"
 
-#include "../naming/nnn-address.h"
+#include "ns3/simulator.h"
+
+#include "ns3/nnn-address.h"
 
 namespace ns3
 {

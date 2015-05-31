@@ -24,9 +24,9 @@
 #ifndef _NNN_DEN_HEADER_H_
 #define _NNN_DEN_HEADER_H_
 
-#include "../nnn-pdu.h"
-#include "../nnn-en-pdus.h"
-#include "../../../nnn-naming.h"
+#include "ns3/nnn-pdu.h"
+#include "ns3/nnn-en-pdus.h"
+#include "ns3/nnn-naming.h"
 
 namespace ns3
 {

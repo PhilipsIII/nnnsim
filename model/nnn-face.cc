@@ -36,10 +36,22 @@
 #include "ns3/uinteger.h"
 
 #include "nnn-face.h"
-#include "nnn-pdus.h"
-#include "nnn-nnnsim-wire.h"
+#include "ns3/nnn-pdus.h"
 
-#include "../helper/nnn-header-helper.h"
+#include "ns3/nnn-wire.h"
+#include "ns3/wire-nnnsim.h"
+#include "ns3/nnnsim-aen.h"
+#include "ns3/nnnsim-den.h"
+#include "ns3/nnnsim-do.h"
+#include "ns3/nnnsim-du.h"
+#include "ns3/nnnsim-en.h"
+#include "ns3/nnnsim-inf.h"
+#include "ns3/nnnsim-nullp.h"
+#include "ns3/nnnsim-oen.h"
+#include "ns3/nnnsim-ren.h"
+#include "ns3/nnnsim-so.h"
+
+#include "ns3/nnn-header-helper.h"
 
 namespace ns3
 {

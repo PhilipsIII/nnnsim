@@ -21,13 +21,23 @@
  *          Zhu Li <phillipszhuli1990@gmail.com>
  */
 
-#include <ns3-dev/ns3/integer.h>
-#include <ns3-dev/ns3/global-value.h>
+#include "ns3/integer.h"
+#include "ns3/global-value.h"
 
-#include "../../helper/nnn-header-helper.h"
-#include "nnnsim/nnnsim.h"
+#include "ns3/nnn-header-helper.h"
 #include "nnn-wire.h"
-#include "wire-nnnsim.h"
+#include "ns3/wire-nnnsim.h"
+
+#include "ns3/nnnsim-aen.h"
+#include "ns3/nnnsim-den.h"
+#include "ns3/nnnsim-do.h"
+#include "ns3/nnnsim-du.h"
+#include "ns3/nnnsim-en.h"
+#include "ns3/nnnsim-inf.h"
+#include "ns3/nnnsim-nullp.h"
+#include "ns3/nnnsim-oen.h"
+#include "ns3/nnnsim-ren.h"
+#include "ns3/nnnsim-so.h"
 
 NNN_NAMESPACE_BEGIN
 

@@ -24,11 +24,12 @@
 #ifndef NNN_FW_HOP_COUNT_TAG_H
 #define NNN_FW_HOP_COUNT_TAG_H
 
-#include <ns3-dev/ns3/tag.h>
+#include "ns3/tag.h"
 
-namespace ns3 {
-  namespace nnn {
-
+namespace ns3
+{
+  namespace nnn
+  {
     /**
      * @ingroup icn-fw
      * @brief Packet tag that is used to track hop count for Interest-Data pairs

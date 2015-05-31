@@ -22,15 +22,15 @@
 
 #include "nnn-fib-impl.h"
 
-#include "../nnn-face.h"
-#include "../fw/nnn-forwarding-strategy.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-forwarding-strategy.h"
 
 #include "ns3/assert.h"
 #include "ns3/log.h"
 #include "ns3/names.h"
 #include "ns3/node.h"
 
-#include "../nnn-icn-pdus.h"
+#include "ns3/nnn-icn-pdus.h"
 
 #include <boost/ref.hpp>
 #include <boost/lambda/lambda.hpp>

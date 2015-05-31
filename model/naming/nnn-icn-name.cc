@@ -25,7 +25,7 @@
 
 #include "nnn-icn-name.h"
 
-#include "error.h"
+#include "ns3/nnn-error.h"
 
 #include <boost/algorithm/string.hpp>
 

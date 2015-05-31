@@ -24,8 +24,8 @@
 #ifndef _NNN_LIMITS_RATE_H_
 #define	_NNN_LIMITS_RATE_H_
 
-#include "nnn-limits.h"
-#include <ns3-dev/ns3/nstime.h>
+#include "ns3/nnn-limits.h"
+#include "ns3/nstime.h"
 
 namespace ns3
 {

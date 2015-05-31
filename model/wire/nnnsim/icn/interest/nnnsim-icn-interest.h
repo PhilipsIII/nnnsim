@@ -20,7 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "../../nnnsim-common.h"
+#include "ns3/nnnsim-common.h"
 
 #ifndef NNNSIM_ICN_INTEREST_H_
 #define NNNSIM_ICN_INTEREST_H_

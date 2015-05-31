@@ -27,11 +27,11 @@
 
 #include "nnn-rtt-mean-deviation.h"
 
-#include <ns3-dev/ns3/simulator.h>
-#include <ns3-dev/ns3/double.h>
-#include <ns3-dev/ns3/integer.h>
-#include <ns3-dev/ns3/uinteger.h>
-#include <ns3-dev/ns3/log.h>
+#include "ns3/simulator.h"
+#include "ns3/double.h"
+#include "ns3/integer.h"
+#include "ns3/uinteger.h"
+#include "ns3/log.h"
 
 NS_LOG_COMPONENT_DEFINE ("nnn.RttMeanDeviation");
 

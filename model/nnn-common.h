@@ -32,7 +32,7 @@
 #define NNNSIM_MODE 1
 
 #define NNN_NAMESPACE_BEGIN  namespace ns3 { namespace nnn {
-#define NNN_NAMESPACE_END    } /*nnn*/ } /*ns3*/
+#define NNN_NAMESPACE_END  } /*nnn*/ } /*ns3*/
 
 /**
  * @brief NS-3 namespace

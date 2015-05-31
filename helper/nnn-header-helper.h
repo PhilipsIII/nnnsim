@@ -26,7 +26,7 @@
 
 #include "ns3/ptr.h"
 
-#include "../model/pdus/nnn/nnn-pdu.h"
+#include "ns3/nnn-pdu.h"
 
 namespace ns3
 {

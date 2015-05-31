@@ -23,7 +23,7 @@
 #ifndef NNN_CONSUMER_CBR_H
 #define NNN_CONSUMER_CBR_H
 
-#include "nnn-icn-consumer.h"
+#include "ns3/nnn-icn-consumer.h"
 
 namespace ns3
 {

@@ -21,13 +21,13 @@
  */
 
 #include "nnn-address.h"
-#include "../wire/wire-nnnsim.h"
+#include "ns3/wire-nnnsim.h"
 
 #include <boost/regex.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <ctype.h>
-#include "error.h"
+#include "ns3/nnn-error.h"
 
 using namespace std;
 

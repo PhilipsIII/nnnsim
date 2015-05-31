@@ -42,13 +42,13 @@ using namespace ::boost::multi_index;
 #include "ns3/nstime.h"
 #include "ns3/object.h"
 
-#include "nnn-nnst-entry-facemetric.h"
-#include "../nnn-naming.h"
-#include "../nnn-face.h"
-#include "../fw/nnn-forwarding-strategy.h"
-#include "../../utils/trie/trie.h"
-#include "../../utils/trie/counting-policy.h"
-#include "../../utils/trie/trie-with-policy.h"
+#include "ns3/nnn-nnst-entry-facemetric.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-face.h"
+#include "ns3/nnn-forwarding-strategy.h"
+#include "ns3/nnn-trie.h"
+#include "ns3/nnn-counting-policy.h"
+#include "ns3/nnn-trie-with-policy.h"
 
 namespace ns3
 {

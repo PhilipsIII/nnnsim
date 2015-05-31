@@ -28,13 +28,12 @@
 #include "ns3/object.h"
 #include "ns3/ptr.h"
 
-#include "../nnn-pdus.h"
-#include "../nnn-naming.h"
-#include "../../utils/trie/trie.h"
-#include "../../utils/trie/counting-policy.h"
-#include "../../utils/trie/trie-with-policy.h"
-
-#include "nnn-pdu-buffer-queue.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-trie.h"
+#include "ns3/nnn-counting-policy.h"
+#include "ns3/nnn-trie-with-policy.h"
+#include "ns3/nnn-pdu-buffer-queue.h"
 
 namespace ns3
 {

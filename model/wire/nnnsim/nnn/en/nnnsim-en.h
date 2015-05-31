@@ -20,8 +20,7 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
-#include "../../nnnsim-common-hdr.h"
-#include "../../nnnsim-common.h"
+#include "ns3/nnnsim-common-hdr.h"
 
 NNN_NAMESPACE_BEGIN
 

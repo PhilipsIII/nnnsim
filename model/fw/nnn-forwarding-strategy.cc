@@ -24,36 +24,34 @@
 // nnnSIM - 3N data
 #include "nnn-forwarding-strategy.h"
 
-#include "../nnn-naming.h"
-
-#include "../nnn-pdus.h"
-#include "../nnn-nnnsim-wire.h"
-
-#include "../pit/nnn-pit.h"
-#include "../pit/nnn-pit-entry.h"
-#include "../pit/nnn-pit-entry-incoming-face.h"
-#include "../pit/nnn-pit-entry-outgoing-face.h"
-#include "../fib/nnn-fib.h"
-
-#include "../nnst/nnn-nnst.h"
-#include "../nnst/nnn-nnst-entry.h"
-#include "../nnst/nnn-nnst-entry-facemetric.h"
-#include "../nnpt/nnn-nnpt.h"
-
-#include "../../helper/nnn-names-container.h"
-#include "../../helper/nnn-face-container.h"
-#include "../buffers/nnn-pdu-buffer.h"
-#include "../addr-aggr/nnn-addr-aggregator.h"
-#include "../../helper/nnn-header-helper.h"
-#include "../../helper/nnn-face-container.h"
-
 // ICN data
-#include "../naming/nnn-icn-name.h"
-#include "../naming/nnn-icn-exclude.h"
-#include "../nnn-icn-pdus.h"
-#include "../nnn-nnnsim-icn-wire.h"
-#include "../cs/nnn-icn-content-store.h"
-#include "../../helper/icn-header-helper.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-icn-pdus.h"
+#include "ns3/nnn-nnnsim-icn-wire.h"
+#include "ns3/nnn-icn-content-store.h"
+#include "ns3/nnn-icn-header-helper.h"
+
+#include "ns3/nnn-pit.h"
+#include "ns3/nnn-pit-entry.h"
+#include "ns3/nnn-pit-entry-incoming-face.h"
+#include "ns3/nnn-pit-entry-outgoing-face.h"
+#include "ns3/nnn-fib.h"
+
+#include "ns3/nnn-naming.h"
+#include "ns3/nnn-pdus.h"
+#include "ns3/nnn-nnnsim-wire.h"
+
+#include "ns3/nnn-nnst.h"
+#include "ns3/nnn-nnst-entry.h"
+#include "ns3/nnn-nnst-entry-facemetric.h"
+#include "ns3/nnn-nnpt.h"
+
+#include "ns3/nnn-names-container.h"
+#include "ns3/nnn-face-container.h"
+#include "ns3/nnn-pdu-buffer.h"
+#include "ns3/nnn-addr-aggregator.h"
+#include "ns3/nnn-header-helper.h"
+#include "ns3/nnn-face-container.h"
 
 #include <boost/ref.hpp>
 #include <boost/foreach.hpp>

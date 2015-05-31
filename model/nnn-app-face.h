@@ -25,7 +25,7 @@
 #ifndef NNN_APP_FACE_H
 #define NNN_APP_FACE_H
 
-#include "nnn-face.h"
+#include "ns3/nnn-face.h"
 #include "ns3/traced-callback.h"
 
 namespace ns3

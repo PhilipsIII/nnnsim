@@ -26,13 +26,13 @@
 #ifndef ICN_NAME_H
 #define ICN_NAME_H
 
-#include "../nnn-icn-common.h"
+#include "ns3/nnn-icn-common.h"
 
 #include "ns3/attribute.h"
 #include "ns3/attribute-helper.h"
 #include "ns3/simple-ref-count.h"
 
-#include "name-component.h"
+#include "ns3/nnn-name-component.h"
 
 ICN_NAMESPACE_BEGIN
 

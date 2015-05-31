@@ -24,7 +24,7 @@
 #ifndef TRIE_WITH_POLICY_3N_H_
 #define TRIE_WITH_POLICY_3N_H_
 
-#include "trie.h"
+#include "ns3/nnn-trie.h"
 
 namespace ns3
 {

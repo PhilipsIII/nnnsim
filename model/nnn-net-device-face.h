@@ -26,7 +26,7 @@
 
 #include "ns3/net-device.h"
 
-#include "nnn-face.h"
+#include "ns3/nnn-face.h"
 
 namespace ns3
 {

@@ -24,9 +24,9 @@
 #ifndef _NNN_LIMITS_H_
 #define	_NNN_LIMITS_H_
 
-#include <ns3-dev/ns3/ptr.h>
-#include <ns3-dev/ns3/object.h>
-#include <ns3-dev/ns3/traced-value.h>
+#include "ns3/ptr.h"
+#include "ns3/object.h"
+#include "ns3/traced-value.h"
 
 namespace ns3
 {

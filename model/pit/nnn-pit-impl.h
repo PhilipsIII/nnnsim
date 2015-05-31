@@ -23,14 +23,14 @@
 #ifndef _NNN_PIT_IMPL_H_
 #define	_NNN_PIT_IMPL_H_
 
-#include "../nnn-icn-naming.h"
-#include "../nnn-icn-pdus.h"
-#include "../../utils/trie/trie-with-policy.h"
+#include "ns3/nnn-icn-naming.h"
+#include "ns3/nnn-icn-pdus.h"
+#include "ns3/nnn-trie-with-policy.h"
 
-#include "nnn-pit.h"
-#include "nnn-pit-entry-impl.h"
+#include "ns3/nnn-pit.h"
+#include "ns3/nnn-pit-entry-impl.h"
 
-#include "../fw/nnn-forwarding-strategy.h"
+#include "ns3/nnn-forwarding-strategy.h"
 
 #include "ns3/log.h"
 #include "ns3/simulator.h"
@@ -49,16 +49,16 @@ namespace ns3
        */
       template<class Policy>
       class PitImpl : public Pit
-      , protected nnn::nnnSIM::trie_with_policy<icn::Name,
-      nnn::nnnSIM::smart_pointer_payload_traits< EntryImpl< PitImpl< Policy > > >,
+      , protected nnnSIM::trie_with_policy<icn::Name,
+      nnnSIM::smart_pointer_payload_traits< EntryImpl< PitImpl< Policy > > >,
       // ndnSIM::persistent_policy_traits
       Policy
       >
       {
       public:
 
-	typedef nnn::nnnSIM::trie_with_policy<icn::Name,
-	    nnn::nnnSIM::smart_pointer_payload_traits< EntryImpl< PitImpl< Policy > > >,
+	typedef nnnSIM::trie_with_policy<icn::Name,
+	    nnnSIM::smart_pointer_payload_traits< EntryImpl< PitImpl< Policy > > >,
 	    // ndnSIM::persistent_policy_traits
 	    Policy
 	    > super;

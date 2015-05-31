@@ -23,8 +23,7 @@
 #ifndef _NNNSIM_DU_H_
 #define _NNNSIM_DU_H_
 
-#include "../../nnnsim-common-hdr.h"
-#include "../../nnnsim-common.h"
+#include "ns3/nnnsim-common-hdr.h"
 
 NNN_NAMESPACE_BEGIN
 

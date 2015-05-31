@@ -24,7 +24,7 @@
 #ifndef _NNN_LIMITS_WINDOW_H_
 #define	_NNN_LIMITS_WINDOW_H_
 
-#include "nnn-limits.h"
+#include "ns3/nnn-limits.h"
 
 namespace ns3
 {
