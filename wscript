@@ -6,8 +6,58 @@
 # def configure(conf):
 #     conf.check_nonfatal(header_name='stdint.h', define_name='HAVE_STDINT_H')
 
+REQUIRED_BOOST_LIBS = ['regex']
+
+def required_boost_libs(conf):
+    conf.env.REQUIRED_BOOST_LIBS += REQUIRED_BOOST_LIBS
+
+def configure(conf):
+    if not conf.env['LIB_BOOST']:
+        conf.report_optional_feature("nnnsim", "nnnsim", False,
+                                     "Required boost libraries not found")
+        Logs.error ("nnnSIM will not be build as it requires boost libraries of version at least 1.48")
+        conf.env['MODULES_NOT_BUILT'].append('nnnsim')
+        return
+    else:
+        present_boost_libs = []
+	for boost_lib_name in conf.env['LIB_BOOST']:
+	    if boost_lib_name.startswith("boost_"):
+	        boost_lib_name = boost_lib_name[6:]
+	    
+            if boost_lib_name.endswith("-mt"):
+	        boost_lib_name = boost_lib_name[:-3]
+
+            present_boost_libs.append(boost_lib_name)
+
+        missing_boost_libs = [lib for lib in REQUIRED_BOOST_LIBS if lib not in present_boost_libs]
+
+	if missing_boost_libs != []:
+            conf.report_optional_feature("nnnsim", "nnnsim", False,
+                                         "nnnsim requires boost libraries: %s" % ' '.join(missing_boost_libs))
+	    conf.env['MODULES_NOT_BUILT'].append('nnnsim')
+	    Logs.error ("nnnsim will not be build as it requires boost libraries: %s" % ' '.join(missing_boost_libs))
+	    Logs.error ("Please upgrade your distribution or install custom boost libraries")
+	    return
+
+	boost_version = conf.env.BOOST_VERSION.split('_')
+	if int(boost_version[0]) < 1 or int(boost_version[1]) < 48:
+	    conf.report_optional_feature("nnnsim", "nnnsim", False,
+			                 "nnnsim requires at least boost version 1.48")
+	    conf.env['MODULES_NOT_BUILT'].append('nnnsim')
+	    Logs.error ("nnnsim will not be build as it requires boost libraries of version at least 1.48")
+	    Logs.error ("Please upgrade your distribution or install custom boost libraries")
+	    return	
+
+    conf.env['ENABLE_NNNSIM'] = True
+    conf.env['MODULES_BUILT'].append('nnnsim')
+
+    conf.report_optional_feature("nnnsim", "nnnsim", True, "")
+
 def build(bld):
-    module = bld.create_ns3_module('nnnsim', ['core'])
+    deps = ['core', 'network', 'point-to-point', 'mobility', 'internet']
+    module = bld.create_ns3_module('nnnsim', deps)
+    module.module = 'nnnsim'
+    module.use += ['BOOST']
     module.source = [
         'helper/nnn-header-helper.cc',
 	'helper/nnn-app-helper.cc',

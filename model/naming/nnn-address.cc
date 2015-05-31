@@ -20,15 +20,14 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
+#include "nnn-address.h"
+#include "../wire/wire-nnnsim.h"
+
 #include <boost/regex.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <ctype.h>
-
-#include "nnn-address.h"
 #include "error.h"
-
-#include "../wire/wire-nnnsim.h"
 
 using namespace std;
 
