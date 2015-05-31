@@ -23,9 +23,6 @@
 #ifndef _NNN_PIT_IMPL_H_
 #define	_NNN_PIT_IMPL_H_
 
-#include "ns3/log.h"
-#include "ns3/simulator.h"
-
 #include "../nnn-icn-naming.h"
 #include "../nnn-icn-pdus.h"
 #include "../../utils/trie/trie-with-policy.h"
@@ -34,6 +31,9 @@
 #include "nnn-pit-entry-impl.h"
 
 #include "../fw/nnn-forwarding-strategy.h"
+
+#include "ns3/log.h"
+#include "ns3/simulator.h"
 
 namespace ns3
 {

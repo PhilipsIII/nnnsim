@@ -20,23 +20,27 @@
  *  Author: Jairo Eduardo Lopez <jairo@ruri.waseda.jp>
  */
 
+#include "nnn-pit-impl.h"
+
+#include "../../utils/trie/empty-policy.h"
+#include "../../utils/trie/persistent-policy.h"
+#include "../../utils/trie/random-policy.h"
+#include "../../utils/trie/lru-policy.h"
+#include "../../utils/trie/multi-policy.h"
+#include "../../utils/trie/aggregate-stats-policy.h"
+
 #include  "ns3/log.h"
-#include  "ns3/simulator.h"
-#include  "ns3/string.h"
-#include  "ns3/uinteger.h"
+
+NS_LOG_COMPONENT_DEFINE ("nnn.pit.PitImpl");
+
+#include "custom-policies/serialized-size-policy.h"
 
 #include <boost/lambda/bind.hpp>
 #include <boost/lambda/lambda.hpp>
 
-#include "../../utils/trie/aggregate-stats-policy.h"
-#include "../../utils/trie/empty-policy.h"
-#include "../../utils/trie/lru-policy.h"
-#include "../../utils/trie/multi-policy.h"
-#include "../../utils/trie/persistent-policy.h"
-#include "../../utils/trie/random-policy.h"
-#include "custom-policies/serialized-size-policy.h"
-
-#include "nnn-pit-impl.h"
+#include  "ns3/string.h"
+#include  "ns3/uinteger.h"
+#include  "ns3/simulator.h"
 
 using namespace boost::tuples;
 using namespace boost;
@@ -53,8 +57,6 @@ namespace ll = boost::lambda;
 
 namespace ns3
 {
-  NS_LOG_COMPONENT_DEFINE ("nnn.pit.PitImpl");
-
   namespace nnn
   {
     namespace pit
@@ -85,7 +87,6 @@ namespace ns3
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, rpt);
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, lpt);
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, sspt);
-
 
       typedef nnn::nnnSIM::multi_policy_traits< boost::mpl::vector2< nnn::nnnSIM::persistent_policy_traits,
 	  nnn::nnnSIM::aggregate_stats_policy_traits > > PersistentWithCountsTraits;
