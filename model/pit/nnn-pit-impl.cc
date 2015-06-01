@@ -63,7 +63,7 @@ namespace ns3
     {
       template<>
       uint32_t
-      PitImpl<serialized_size_policy_traits>::GetCurrentSize () const
+      PitImpl<nnnSIM::serialized_size_policy_traits>::GetCurrentSize () const
       {
 	return super::getPolicy ().get_current_space_used ();
       }
@@ -73,29 +73,29 @@ namespace ns3
 //////////////////////////////////////////////////////////////////////////////////////////
 
       // explicit instantiation and registering
-      template class PitImpl<nnn::nnnSIM::persistent_policy_traits>;
-      template class PitImpl<nnn::nnnSIM::random_policy_traits>;
-      template class PitImpl<nnn::nnnSIM::lru_policy_traits>;
-      template class PitImpl<nnn::nnnSIM::serialized_size_policy_traits>;
+      template class PitImpl<nnnSIM::persistent_policy_traits>;
+      template class PitImpl<nnnSIM::random_policy_traits>;
+      template class PitImpl<nnnSIM::lru_policy_traits>;
+      template class PitImpl<nnnSIM::serialized_size_policy_traits>;
 
-      typedef nnn::nnnSIM::persistent_policy_traits ppt;
-      typedef nnn::nnnSIM::random_policy_traits rpt;
-      typedef nnn::nnnSIM::lru_policy_traits lpt;
-      typedef nnn::nnnSIM::serialized_size_policy_traits sspt;
+      typedef nnnSIM::persistent_policy_traits ppt;
+      typedef nnnSIM::random_policy_traits rpt;
+      typedef nnnSIM::lru_policy_traits lpt;
+      typedef nnnSIM::serialized_size_policy_traits sspt;
 
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, ppt);
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, rpt);
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, lpt);
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, sspt);
 
-      typedef nnn::nnnSIM::multi_policy_traits< boost::mpl::vector2< nnn::nnnSIM::persistent_policy_traits,
-	  nnn::nnnSIM::aggregate_stats_policy_traits > > PersistentWithCountsTraits;
-      typedef nnn::nnnSIM::multi_policy_traits< boost::mpl::vector2< nnn::nnnSIM::random_policy_traits,
-	  nnn::nnnSIM::aggregate_stats_policy_traits > > RandomWithCountsTraits;
-      typedef nnn::nnnSIM::multi_policy_traits< boost::mpl::vector2< nnn::nnnSIM::lru_policy_traits,
-	  nnn::nnnSIM::aggregate_stats_policy_traits > > LruWithCountsTraits;
-      typedef nnn::nnnSIM::multi_policy_traits< boost::mpl::vector2< nnn::nnnSIM::serialized_size_policy_traits,
-	  nnn::nnnSIM::aggregate_stats_policy_traits > > SerializedSizeWithCountsTraits;
+      typedef nnnSIM::multi_policy_traits< boost::mpl::vector2< nnnSIM::persistent_policy_traits,
+	  nnnSIM::aggregate_stats_policy_traits > > PersistentWithCountsTraits;
+      typedef nnnSIM::multi_policy_traits< boost::mpl::vector2< nnnSIM::random_policy_traits,
+	  nnnSIM::aggregate_stats_policy_traits > > RandomWithCountsTraits;
+      typedef nnnSIM::multi_policy_traits< boost::mpl::vector2< nnnSIM::lru_policy_traits,
+	  nnnSIM::aggregate_stats_policy_traits > > LruWithCountsTraits;
+      typedef nnnSIM::multi_policy_traits< boost::mpl::vector2< nnnSIM::serialized_size_policy_traits,
+	  nnnSIM::aggregate_stats_policy_traits > > SerializedSizeWithCountsTraits;
 
       template class PitImpl<PersistentWithCountsTraits>;
       NS_OBJECT_ENSURE_REGISTERED_TEMPL(PitImpl, PersistentWithCountsTraits);

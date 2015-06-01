@@ -37,6 +37,9 @@
 #include "ns3/nnn-face.h"
 #include "ns3/nnn-naming.h"
 
+#include "ns3/nnn-pit.h"
+#include "ns3/nnn-pit-entry.h"
+
 namespace ns3
 {
   namespace nnn
@@ -81,9 +84,6 @@ namespace ns3
 
     class NNPT;
     namespace nnpt { class Entry; }
-
-    class Pit;
-    namespace pit { class Entry; }
 
     class Fib;
     namespace fib

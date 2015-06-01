@@ -31,8 +31,6 @@
 #include "ns3/nnn-icn-content-store.h"
 #include "ns3/nnn-icn-header-helper.h"
 
-#include "ns3/nnn-pit.h"
-#include "ns3/nnn-pit-entry.h"
 #include "ns3/nnn-pit-entry-incoming-face.h"
 #include "ns3/nnn-pit-entry-outgoing-face.h"
 #include "ns3/nnn-fib.h"
