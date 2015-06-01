@@ -21,6 +21,7 @@
 */
 #ifndef NNN_NNNSIM_WIRE_H_
 #define NNN_NNNSIM_WIRE_H_
+
 #include "ns3/nnn-wire.h"
 #include "ns3/wire-nnnsim.h"
 #include "ns3/nnnsim-aen.h"
@@ -33,4 +34,6 @@
 #include "ns3/nnnsim-oen.h"
 #include "ns3/nnnsim-ren.h"
 #include "ns3/nnnsim-so.h"
+
+
 #endif
