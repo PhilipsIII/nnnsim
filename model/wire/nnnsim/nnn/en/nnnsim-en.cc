@@ -151,7 +151,7 @@ namespace wire
 	  NS_LOG_INFO ("Address length: " << addrSize);
 
 	  // Use the CopyTo function to get the bit representation
-	  m_ptr->GetOnePoa (i).CopyAllTo (buffer, addrSize);
+	  m_ptr->GetOnePoa (i).CopyAllTo (buffer, serialSize);
 
 	  // Since the bit representation is in 8 bit chunks, serialize it
 	  // accordingly
@@ -187,8 +187,11 @@ namespace wire
 
       for (uint16_t k = 0; k < totalpoas; k++)
 	{
+	  NS_LOG_INFO ("Deserialize -> PoA = " << k);
 	  uint8_t type = i.ReadU8 ();
+	  NS_LOG_INFO ("Deserialize -> PoA type = " << type);
 	  uint8_t length = i.ReadU8 ();
+	  NS_LOG_INFO ("Deserialize -> PoA Num = " << length);
 
 	  // Create a buffer to be able to deserialize PoAs
 	  uint8_t buffer[length];

@@ -160,8 +160,13 @@ namespace ns3
 	      uint8_t addrSize = tmpaddr.GetLength ();
 	      uint8_t buffer[serialSize];
 
+	      NS_LOG_INFO ("Serialize Addr: " << i);
+	      NS_LOG_INFO ("Address: " << tmpaddr);
+	      NS_LOG_INFO ("Serialized Length: " << serialSize);
+	      NS_LOG_INFO ("Address length: " << addrSize);
+
 	      // Use the CopyTo function to get the bit representation
-	      m_ptr->GetOnePoa (i).CopyAllTo (buffer, addrSize);
+	      m_ptr->GetOnePoa (i).CopyAllTo (buffer, serialSize);
 
 	      // Since the bit representation is in 8 bit chunks, serialize it
 	      // accordingly
@@ -197,13 +202,13 @@ namespace ns3
 	      uint8_t addrSize = tmpaddr.GetLength ();
 	      uint8_t buffer[serialSize];
 
-	      NS_LOG_INFO ("Serialize Addr: " << i);
-	      NS_LOG_INFO ("Address: " << tmpaddr);
-	      NS_LOG_INFO ("Serialized Length: " << serialSize);
-	      NS_LOG_INFO ("Address length: " << addrSize);
+	      NS_LOG_INFO ("Serialize Personal Addr: " << i);
+	      NS_LOG_INFO ("Personal Address: " << tmpaddr);
+	      NS_LOG_INFO ("Personal Serialized Length: " << serialSize);
+	      NS_LOG_INFO ("Personal Address length: " << addrSize);
 
 	      // Use the CopyTo function to get the bit representation
-	      m_ptr->GetPersonalOnePoa(i).CopyAllTo (buffer, addrSize);
+	      m_ptr->GetPersonalOnePoa(i).CopyAllTo (buffer, serialSize);
 
 	      // Since the bit representation is in 8 bit chunks, serialize it
 	      // accordingly

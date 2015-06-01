@@ -153,7 +153,7 @@ namespace wire
 	  NS_LOG_INFO ("Address length: " << addrSize);
 
 	  // Use the CopyTo function to get the bit representation
-	  m_ptr->GetOnePoa(i).CopyAllTo(buffer, addrSize);
+	  m_ptr->GetOnePoa(i).CopyAllTo(buffer, serialSize);
 
 	  // Since the bit representation is in 8 bit chunks, serialize it
 	  // accordingly
