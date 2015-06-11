@@ -101,7 +101,7 @@ main (int argc, char *argv[])
   cmd.AddValue ("mac-server", "Mac Address for Server Default : 00:00:00:00:00:02", macServer);
   cmd.Parse (argc, argv);
 
-  Config::SetGlobal ("nnn::WireFormat", StringValue ("1"));
+ // Config::SetGlobal ("nnn::WireFormat", StringValue ("1"));
 
   Mac48AddressValue localMac;
   
